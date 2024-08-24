@@ -10,8 +10,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<Boolean>(false);
 
   return (
-    <nav className="bg-gray-100 fixed border border-gray-200 h-[70px] flex items-center justify-center w-screen z-50">
-      <div className="flex items-center xl:w-3/4 w-full sm:px-4 md:px-4 lg:px-4 xl:px-12 px-4 justify-between w-full">
+    <nav className="bg-gray-100 fixed border border-gray-200 sm:h-[70px] xl:h-30 flex items-center justify-center w-screen z-50">
+      <div className="flex items-center xl:w-11/12 w-full sm:px-4 md:px-4 lg:px-4 xl:px-12 px-4 justify-between">
         <div className="flex items-center">
           <Image
             width={100}
@@ -51,7 +51,7 @@ const Header = () => {
             <Link
               key={item.id}
               href={item.href}
-              className={`hover:${item.hover} px-2 py-1 md:w-full mt-2 mb-2  lg:min-w-max border border-nav-bg rounded-md text-textXs bg-transparent`}
+              className={`px-2 py-1 md:w-full mt-2 mb-2 ${item.color} lg:min-w-max border border-nav-bg rounded-md sm:text-textXs lg:text-textMd xl:text-textMd bg-transparent ${item.hover}`}
             >
               {item.name}
             </Link>

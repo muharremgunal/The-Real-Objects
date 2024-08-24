@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "nav-bg": "#d5d5d5",
+        ime: "#DCDC28",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
@@ -19,8 +20,15 @@ const config: Config = {
         textXs: "12px",
         textMd: "14px",
         textLg: "16px",
-        textXl: "118px",
+        textXl: "18px",
         textXxl: "20px",
+      },
+      transitionDuration: {
+        "400": "400ms",
+        "2000": "2000ms",
+      },
+      transitionTimingFunction: {
+        "custom-ease": "cubic-bezier(0.4, 0, 0.2, 1)",
       },
     },
   },
