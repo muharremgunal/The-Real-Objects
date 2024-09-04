@@ -13,7 +13,7 @@ const config: Config = {
         ime: "#DCDC28",
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
+        sans: ["Open Sans", "sans-serif"],
       },
       fontSize: {
         textXxs: "8px",

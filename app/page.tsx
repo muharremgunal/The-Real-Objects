@@ -1,19 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import firstImage from "../public/assets/images/firstImage.png";
 import woolly from "../public/assets/images/woolly.png";
 import brick from "../public/assets/images/brick.png";
-import Olive from "../public/assets/images/t-olive.png";
-import one from "../public/assets/images/1.png";
+import Olivey from "../public/assets/images/olivey.png";
 import motor from "../public/assets/images/motor.png";
 import logo from "../public/assets/images/logo.jpg";
 import vicle from "../public/assets/images/vicle.jpeg";
 import coffe from "../public/assets/images/caffe.jpeg";
-import { sliderData } from "./data/homeData";
+import footerImage from "../public/assets/images/footerImages.png";
+import {
+  scrollImages,
+  sliderCardData,
+  sliderData,
+  sliderImages,
+} from "./data/homeData";
 import Link from "next/link";
 import ScrollImages from "./components/ScrollImages";
+import { Carousel } from "antd";
+import SliderCard from "./components/sliderCard";
 
 const Index = () => {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
@@ -23,88 +30,148 @@ const Index = () => {
       alt: "Image 1",
       href: "/detail/img1",
       text: (
-        <div className="flex flex-col items-start justify-start">
-          <span className="text-xl">Brick</span>
-          <span className="text-lg">olive</span>
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
         </div>
       ),
-      bg: "bg-green-300",
+      bg: "bg-[#FFCE31]",
       colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
-      rowSpan: "sm:row-span-2 md:col-span-1",
+      rowSpan: "row-span-3",
     },
     {
       src: woolly,
       alt: "Image 2",
       href: "/detail/img2",
-      text: "Coffe",
+      text: (
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
+        </div>
+      ),
       bg: "bg-green-300",
       colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
-      rowSpan: "sm:row-span-2 ",
+      rowSpan: "row-span-3",
     },
     {
-      src: one,
+      src: brick,
       alt: "Image 3",
       href: "/detail/img3",
-      text: "Coffe",
-      bg: "bg-green-300",
+      text: (
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
+        </div>
+      ),
+      bg: "bg-[#FFCE31]",
       colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
-      rowSpan: "sm:row-span-2 md:col-span-1",
+      rowSpan: "row-span-3",
     },
     {
       src: coffe,
       alt: "Image 4",
       href: "/detail/img4",
-      text: "Coffe",
+      text: (
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
+        </div>
+      ),
       bg: "bg-green-300",
       colSpan: "col-span-2 md:col-span-2 sm:col-span-2",
-      rowSpan: "sm:row-span-2",
+      rowSpan: "row-span-3",
     },
     {
       src: vicle,
       alt: "Image 2",
       href: "/detail/img2",
-      text: "Coffe",
-      bg: "bg-green-300",
+      text: (
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
+        </div>
+      ),
+      bg: "bg-[#FFCE31]",
       colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
-      rowSpan: "sm:row-span-2",
+      rowSpan: "row-span-3",
     },
     {
-      src: one,
+      src: brick,
       alt: "Image 3",
       href: "/detail/img3",
-      text: "Coffe",
-      bg: "bg-green-300",
+      text: (
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
+        </div>
+      ),
+      bg: "bg-[#DCDC28]",
       colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
-      rowSpan: "sm:row-span-2",
+      rowSpan: "row-span-3",
     },
     {
-      src: one,
+      src: brick,
       alt: "Image 3",
       href: "/detail/img3",
-      text: "Coffe",
+      text: (
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
+        </div>
+      ),
       bg: "bg-green-300",
       colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
-      rowSpan: "sm:row-span-2 md:col-span-1",
+      rowSpan: "row-span-3",
     },
     {
-      src: one,
+      src: brick,
       alt: "Image 3",
       href: "/detail/img3",
-      text: "Coffe",
-      bg: "bg-sky-300",
+      text: (
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
+        </div>
+      ),
+      bg: "bg-[#DCDC28]",
       colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
-      rowSpan: "sm:row-span-2 md:col-span-1",
+      rowSpan: "row-span-3",
     },
     {
-      src: Olive,
+      src: Olivey,
       alt: "Image 2",
       href: "/detail/img2",
-      text: "Coffe",
-      bg: "bg-green-300",
+      text: (
+        <div className="flex flex-col items-start justify-start py-2 px-5">
+          <span className="text-md font-bold">Woolly</span>
+          <span className="text-sm font-thin">Capsule Coffee Machine</span>
+          <span className="text-sm font-semibold">Soft Mornings</span>
+        </div>
+      ),
+      bg: "bg-[#FFCE31]",
       colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
-      rowSpan: "sm:row-span-2 ",
+      rowSpan: "row-span-3",
     },
   ];
+
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: false,
+    pauseOnHover: true,
+    swipeToSlide: true,
+    centerMode: true,
+    centerPadding: "50px",
+  };
 
   return (
     <div className="w-screen h-auto">
@@ -112,7 +179,7 @@ const Index = () => {
         objectFit="cover"
         src={firstImage}
         alt="Logo"
-        className="w-screen"
+        className="w-screen h-[800px]"
       />
 
       <div className="z-0 w-full h-full flex flex-col items-center">
@@ -198,12 +265,12 @@ const Index = () => {
             </p>
           </div>
           <div className="absolute bottom-0 right-0 ">
-            <div className="bg-white rounded-full p-2 shadow-md flex items-center justify-center">
-              <Image src={logo} alt="logo" width={30} height={30} />
+            <div className="rounded-full bottom-0 right-0 shadow-md flex items-center justify-center">
+              <Image src={footerImage} alt="logo" width={80} height={80} />
             </div>
           </div>
         </div>
-        <div className="w-screen flex items-center justify-center">
+        <div className="w-screen h-screen xl:mb-60 lg:mb-0 md:mb-0 sm:mb-0 flex items-center justify-center">
           <div
             className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-4 xl:max-w-[1326px] w-full h-screen sm:px-4 md:px-4 lg:px-4 xl:px-0 gap-4 p-4 transform origin-top-center transition-transform duration-500 ease-in-out 
           scale-100 md:scale-x-[0.90] md:scale-y-[0.50] sm:scale-x-[0.90] sm:scale-y-[0.50] lg:scale-x-90 lg:scale-y-50 xl:scale-100"
@@ -211,7 +278,7 @@ const Index = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className={`relative cursor-pointer transition-all duration-500 ease-in-out ${
+                className={`relative cursor-pointer transition-all duration-500 ease-in-out h-80 ${
                   hoveredIndex !== null && hoveredIndex !== index
                     ? `blur-sm`
                     : ""
@@ -229,7 +296,7 @@ const Index = () => {
                 </Link>
                 {hoveredIndex === index && (
                   <div
-                    className={`absolute bottom-0 flex items-end justify-center ${image.bg} w-full h-16 transition-all duration-800 ease-in-out`}
+                    className={`absolute bottom-0 flex items-end justify-center ${image.bg} w-full h-20 transition-all duration-800 ease-in-out`}
                   >
                     <span className="w-full h-full flex items-start justify-start font-bold text-white">
                       {image.text}
@@ -241,7 +308,63 @@ const Index = () => {
           </div>
         </div>
 
+        <div className="flex flex-col items-center justify-center w-screen h-max-content mb-24 mt-10">
+          <div className="text-6xl font-medium">Recognitions</div>
+          <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative mt-10 xl:h-40 lg:h-20 md:h-16 sm:h10 h-8 backdrop-blur-sm bg-white/20">
+            <div className="flex animate-marquee  items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10">
+              {sliderImages.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex w-max h-full items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10"
+                >
+                  <span className="bg-[#DCDC28] rounded-full w-4 h-4" />
+                  <Image className="w-max h-full" src={item.src} alt="images" />
+                </div>
+              ))}
+            </div>
+            <div className="flex animate-marquee  items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10">
+              {sliderImages.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex w-max h-full items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10"
+                >
+                  <span className="bg-[#DCDC28] rounded-full w-4 h-4" />
+                  <Image className="w-max h-full" src={item.src} alt="images" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <ScrollImages />
+
+        <div className="w-full h-full z-50 flex flex-wrap items-center justify-between space-x-8 max-w-[1326px] ">
+          <div className="relative w-2/4 overflow-hidden">
+            <Carousel className="h-full" {...settings}>
+              {sliderCardData.map((item, index) => (
+                <SliderCard
+                  key={index}
+                  src={item.src}
+                  alt={item.alt}
+                  color={item.color}
+                  designerName={item.designerName}
+                  projectName={item.projectName}
+                  cardTitle={item.cardTitle}
+                />
+              ))}
+            </Carousel>
+          </div>
+
+          <div className="w-1/4 flex flex-col items-end">
+            <h2 className="text-4xl font-bold">Our Impact</h2>
+            <p className="mt-4 text-gray-500 text-end">
+              Our design fosters collaboration, resonates with users, and
+              attracts investors. Our award-winning process enhances user
+              experience and delivers strong returns, helping our partners
+              thrive.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
