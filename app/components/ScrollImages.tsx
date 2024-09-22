@@ -63,15 +63,15 @@ const ScrollImages = () => {
         ))}
       </div>
       <div className="h-[300vh] overflow-hidden absolute top-24 w-full z-40">
-        <div className="text-6xl w-full h-[500px] flex items-center mt-[200px] justify-center text-white left-40">
+        <div className="lg:text-6xl xxxsm:text-4xl w-full h-[500px] font-bold flex items-center mt-[200px] justify-center text-white left-40">
           Our Expertise
         </div>
         <Scrollama offset={0.6} onStepEnter={onStepEnter}>
           {scrollImages.map((image, index) => (
             <Step data={index} key={index}>
-              <div className="h-[300px] flex items-start text-start justify-start left-40 ml-40">
+              <div className="h-[300px] flex items-start text-start justify-start left-40 lg:ml-40 xxxsm:ml-10">
                 <div
-                  className={`text-4xl text-white font-bold w-1/2 ${
+                  className={`text-4xl text-white font-bold lg:w-1/2 xxxsm:w-full ${
                     currentStepIndex === index ? "opacity-100" : "opacity-60"
                   } inline`}
                 >

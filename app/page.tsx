@@ -21,6 +21,7 @@ import Link from "next/link";
 import ScrollImages from "./components/ScrollImages";
 import { Carousel } from "antd";
 import SliderCard from "./components/sliderCard";
+import MouseFollower from "./components/mouseMove";
 
 const Index = () => {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
@@ -176,13 +177,13 @@ const Index = () => {
   return (
     <div className="w-screen h-auto">
       <Image
-        objectFit="cover"
+        objectFit="contain"
         src={firstImage}
         alt="Logo"
-        className="w-screen h-[800px]"
+        className="w-screen xxxsm:h-[600px] xxsm:h-[200px] xxsm:h-[200px] sm:h-[250px] lg:h-[800px]"
       />
-
-      <div className="z-0 w-full h-full flex flex-col items-center">
+      <MouseFollower />
+      <div className="z-0 w-full h-full flex flex-col items-center px-3">
         <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative xl:h-16 lg:h-12 md:h-10 sm:h-8 h-6 -mt-6 backdrop-blur-sm bg-white/20 xl:-mt-16 lg:-mt-12 md:-mt-10 sm:-mt-8">
           <div className="flex animate-marquee  items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10">
             {sliderData.map((item, index) => (
@@ -212,37 +213,39 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center px-1 my-20 max-w-[1326px]">
-          <div className="flex flex-col md:flex-row items-start justify-between w-full">
-            <div className="w-2/3 space-y-8">
-              <h1 className="text-6xl text-black">
+        <div className="flex items-center justify-center px-1 lg:my-20 xxxsm:my-10 max-w-[1326px] h-max-content">
+          <div className="flex flex-col  md:flex-row items-start justify-between w-full">
+            <div className="lg:w-2/3 sm:w-full space-y-8">
+              <h1 className="lg:text-6xl sm:text-md text-black font-semibold">
                 For us, design is more than just making things look good.
               </h1>
-              <p className="text-2xl text-gray-700 w-3/4">
+              <p className="lg:text-2xl sm:text-sm text-gray-700 lg:w-3/4 sm:w-full">
                 It’s our way of making real, positive change in the world. We
                 want to create products that not only serve a purpose but also
                 bring a sense of happiness and possibility to everyday life.
               </p>
-              <ul className="space-y-4">
-                <li className="flex items-center text-2xl gap-5">
-                  <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
-                  Industrial Design
-                </li>
-                <li className="flex items-center text-2xl gap-5">
-                  <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
-                  Product Design
-                </li>
-                <li className="flex items-center text-2xl gap-5">
-                  <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
-                  UX/UI Design
-                </li>
-                <li className="flex items-center text-2xl gap-5">
-                  <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
-                  Design for Manufacturing
-                </li>
-              </ul>
+              <div className="flex flex-col justify-between">
+                <ul className="space-y-4">
+                  <li className="flex items-center lg:text-2xl sm:text-sm gap-5">
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
+                    Industrial Design
+                  </li>
+                  <li className="flex items-center lg:text-2xl sm:text-sm gap-5">
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
+                    Product Design
+                  </li>
+                  <li className="flex items-center lg:text-2xl sm:text-sm gap-5">
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
+                    UX/UI Design
+                  </li>
+                  <li className="flex items-center lg:text-2xl sm:text-sm gap-5">
+                    <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
+                    Design for Manufacturing
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="w-full -ml-[400px] h-full">
+            <div className="w-full lg:-ml-[400px] h-full ">
               <Image
                 src={motor}
                 alt="Design Image"
@@ -252,33 +255,28 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#DCDC28] relative py-10 flex flex-col items-center justify-center max-w-[1326px]">
-          <div className="text-center px-40">
-            <h2 className="text-4xl font-bold">Our Work</h2>
-            <p className="mt-4 text-lg px-10">
-              Every product we design has its own unique impact on its users. We
-              strive to <span className="font-bold">evoke emotions</span> and
-              create{" "}
-              <span className="font-bold">
-                experiences that resonate on a personal level.
-              </span>
-            </p>
-          </div>
-          <div className="absolute bottom-0 right-0 ">
-            <div className="rounded-full bottom-0 right-0 shadow-md flex items-center justify-center">
-              <Image src={footerImage} alt="logo" width={80} height={80} />
+
+        <div className="w-screen h-full xl:mb-60 lg:mb-0 md:mb-0 sm:mb-0 flex flex-col items-center justify-center">
+          <div className="w-full bg-[#DCDC28] relative py-10 flex flex-col items-center justify-center max-w-[1326px]">
+            <div className="text-center lg:px-40">
+              <h2 className="text-4xl font-bold">Our Work</h2>
+              <p className="mt-4 lg:text-lg xxxsm:text-sm px-10">
+                Every product we design has its own unique impact on its users.
+                We strive to evoke emotions and create experiences that resonate
+                on a personal level.
+              </p>
+            </div>
+            <div className="absolute bottom-0 right-0 ">
+              <div className="rounded-full bottom-0 right-0 shadow-md flex items-center justify-center">
+                <Image src={footerImage} alt="logo" width={80} height={80} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="w-screen h-screen xl:mb-60 lg:mb-0 md:mb-0 sm:mb-0 flex items-center justify-center">
-          <div
-            className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-4 xl:max-w-[1326px] w-full h-screen sm:px-4 md:px-4 lg:px-4 xl:px-0 gap-4 p-4 transform origin-top-center transition-transform duration-500 ease-in-out 
-          scale-100 md:scale-x-[0.90] md:scale-y-[0.50] sm:scale-x-[0.90] sm:scale-y-[0.50] lg:scale-x-90 lg:scale-y-50 xl:scale-100"
-          >
+          <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-4 xl:max-w-[1326px] w-full  sm:px-4 md:px-4 lg:px-4 xl:px-0 gap-4 p-4 transform origin-top-center transition-transform duration-500 ease-in-out">
             {images.map((image, index) => (
               <div
                 key={index}
-                className={`relative cursor-pointer transition-all duration-500 ease-in-out h-80 ${
+                className={`relative cursor-pointer transition-all duration-500 ease-in-out h-80 xxxsm:h-[200px] xxsm:h-[200px] xxsm:h-[200px] sm:h-[250px] lg:h-[320px] ${
                   hoveredIndex !== null && hoveredIndex !== index
                     ? `blur-sm`
                     : ""
@@ -286,7 +284,7 @@ const Index = () => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <Link href={image.href} passHref>
+                <Link href={image.href} passHref className="xsm:h-[100px]">
                   <Image
                     src={image.src}
                     alt={image.alt}
@@ -308,9 +306,11 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-screen h-max-content mb-24 mt-10">
-          <div className="text-6xl font-medium">Recognitions</div>
-          <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative mt-10 xl:h-40 lg:h-20 md:h-16 sm:h10 h-8 backdrop-blur-sm bg-white/20">
+        <div className="flex flex-col items-center justify-center w-screen h-max-content lg:mb-24 xxxsm:mb-8 mt-5">
+          <div className="lg:text-6xl xxxsm:text-2xl font-medium">
+            Recognitions
+          </div>
+          <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative mt-4 xl:h-40 lg:h-20 md:h-16 sm:h10 h-8 backdrop-blur-sm bg-white/20">
             <div className="flex animate-marquee  items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10">
               {sliderImages.map((item, index) => (
                 <div
@@ -339,7 +339,8 @@ const Index = () => {
         <ScrollImages />
 
         <div className="w-full h-full z-50 flex flex-wrap items-center justify-between space-x-8 max-w-[1326px] ">
-          <div className="relative w-2/4 overflow-hidden">
+          <div className="relative sm:w-2/4 xxxsm:w-full overflow-hidden">
+            <h2 className="text-center text-4xl font-bold">Our Impact</h2>
             <Carousel className="h-full" {...settings}>
               {sliderCardData.map((item, index) => (
                 <SliderCard
@@ -355,7 +356,7 @@ const Index = () => {
             </Carousel>
           </div>
 
-          <div className="w-1/4 flex flex-col items-end">
+          <div className="w-1/4 flex flex-col items-end justify-end xxxsm:block text-end xxxsm:hidden lg:block">
             <h2 className="text-4xl font-bold">Our Impact</h2>
             <p className="mt-4 text-gray-500 text-end">
               Our design fosters collaboration, resonates with users, and

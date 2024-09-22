@@ -30,6 +30,11 @@ const config: Config = {
       transitionTimingFunction: {
         "custom-ease": "cubic-bezier(0.4, 0, 0.2, 1)",
       },
+      screens: {
+        xxxsm: "360px",
+        xxsm: "390px",
+        xsm: "414px",
+      },
     },
   },
   plugins: [],
