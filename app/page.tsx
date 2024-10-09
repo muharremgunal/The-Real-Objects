@@ -1,16 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import firstImage from "../public/assets/images/firstImage.png";
 import woolly from "../public/assets/images/woolly.png";
 import brick from "../public/assets/images/brick.png";
 import Olivey from "../public/assets/images/olivey.png";
 import motor from "../public/assets/images/motor.png";
-import logo from "../public/assets/images/logo.jpg";
 import vicle from "../public/assets/images/vicle.jpeg";
 import coffe from "../public/assets/images/caffe.jpeg";
-import footerImage from "../public/assets/images/footerImages.png";
+import clearLogo from "../public/assets/images/clearLogo.png";
 import {
   scrollImages,
   sliderCardData,
@@ -171,7 +170,7 @@ const Index = () => {
     pauseOnHover: true,
     swipeToSlide: true,
     centerMode: true,
-    centerPadding: "50px",
+    centerPadding: "60px",
   };
 
   return (
@@ -180,7 +179,7 @@ const Index = () => {
         objectFit="contain"
         src={firstImage}
         alt="Logo"
-        className="w-screen xxxsm:h-[600px] xxsm:h-[200px] xxsm:h-[200px] sm:h-[250px] lg:h-[800px]"
+        className="w-screen phone:h-[600px]  sm:h-[550px] lg:h-[800px]"
       />
       <MouseFollower />
       <div className="z-0 w-full h-full flex flex-col items-center px-3">
@@ -191,7 +190,7 @@ const Index = () => {
                 key={index}
                 className="flex items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10"
               >
-                <span className="bg-[#DCDC28] rounded-full w-3 h-3 mr-2"></span>
+                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2 w-3 h-3 mr-2"></span>
                 <span className="xl:w-60 lg:w-40 md:w-20 sm:w-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2">
                   {item}
                 </span>
@@ -204,7 +203,7 @@ const Index = () => {
                 key={index}
                 className="flex items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10"
               >
-                <span className="bg-[#DCDC28] rounded-full w-3 h-3 mr-2"></span>
+                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2  w-3 h-3 mr-2"></span>
                 <span className="xl:w-60 lg:w-40 md:w-20 sm:w-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2">
                   {item}
                 </span>
@@ -213,39 +212,49 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center px-1 lg:my-20 xxxsm:my-10 max-w-[1326px] h-max-content">
+        {/*  <div className="flex items-center justify-center px-1 py-10  max-w-[1326px] h-max-content">
           <div className="flex flex-col  md:flex-row items-start justify-between w-full">
-            <div className="lg:w-2/3 sm:w-full space-y-8">
-              <h1 className="lg:text-6xl sm:text-md text-black font-semibold">
+            <div className="phone:w-full sm:w-1/3 lg:w-2/3 md:w-2/3  phone:space-y-4 xl:space-y-16 lg:space-y-8 md:space-y-4">
+              <h1 className="md:text-xl sm:text-sm phone:text-[16px] phone:font-bold lg:text-3xl xl:text-5xl sm:text-md text-black  md:font-bold lg:font-bold">
                 For us, design is more than just making things look good.
               </h1>
-              <p className="lg:text-2xl sm:text-sm text-gray-700 lg:w-3/4 sm:w-full">
+              <p className="md:text-md lg:text-xl xl:text-2xl sm:text-sm phone:text-[12px] text-gray-700 lg:w-3/4 sm:w-full">
                 It’s our way of making real, positive change in the world. We
                 want to create products that not only serve a purpose but also
                 bring a sense of happiness and possibility to everyday life.
               </p>
-              <div className="flex flex-col justify-between">
-                <ul className="space-y-4">
-                  <li className="flex items-center lg:text-2xl sm:text-sm gap-5">
-                    <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
-                    Industrial Design
-                  </li>
-                  <li className="flex items-center lg:text-2xl sm:text-sm gap-5">
-                    <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
-                    Product Design
-                  </li>
-                  <li className="flex items-center lg:text-2xl sm:text-sm gap-5">
-                    <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
-                    UX/UI Design
-                  </li>
-                  <li className="flex items-center lg:text-2xl sm:text-sm gap-5">
-                    <span className="inline-block w-3 h-3 rounded-full bg-[#DCDC28] mr-2"></span>
-                    Design for Manufacturing
-                  </li>
-                </ul>
+              <div className="flex items-center">
+                <div className="flex flex-col justify-between phone:w-3/4">
+                  <ul className="lg:space-y-5 md:space-y-4 phone:space-y-4">
+                    <li className="flex items-center md:text-sm phone:text-[8px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
+                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mr-2"></span>
+                      Industrial Design
+                    </li>
+                    <li className="flex items-center md:text-sm phone:text-[8px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
+                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mr-2"></span>
+                      Product Design
+                    </li>
+                    <li className="flex items-center md:text-sm phone:text-[8px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
+                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mr-2"></span>
+                      UX/UI Design
+                    </li>
+                    <li className="flex items-center md:text-sm phone:text-[8px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
+                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mr-2"></span>
+                      Design for Manufacturing
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full lg:-ml-[400px] md:-ml-[150px] h-full md:hidden">
+                  <Image
+                    src={motor}
+                    alt="Design Image"
+                    className="w-full h-full"
+                    objectFit="cover"
+                  />
+                </div>
               </div>
             </div>
-            <div className="w-full lg:-ml-[400px] h-full ">
+            <div className="w-full lg:-ml-[400px] md:-ml-[150px] h-full phone:hidden">
               <Image
                 src={motor}
                 alt="Design Image"
@@ -254,13 +263,58 @@ const Index = () => {
               />
             </div>
           </div>
+        </div> */}
+
+        <div className="flex relative items-center justify-end px-1 py-10  max-w-[1326px] h-max-content">
+          <div className="flex flex-col md:flex-row items-start justify-between w-full">
+            <div className="phone:w-7/12 w-full  phone:space-y-4 xl:space-y-12 lg:space-y-8 md:space-y-4">
+              <h1 className="md:text-xl sm:text-sm phone:text-[12px] phone:font-bold w-full md:w-7/12 pr-4 lg:text-3xl xl:text-4xl sm:text-md text-black  md:font-bold lg:font-bold">
+                For us, design is more than just making things look good.
+              </h1>
+              <p className="md:text-md lg:text-xl xl:text-2xl phone:w-2/3 md:w-5/12 lg:w-5/12 sm:text-sm phone:text-[8px] text-gray-700 lg:w-3/4 pr-4">
+                It’s our way of making real, positive change in the world. We
+                want to create products that not only serve a purpose but also
+                bring a sense of happiness and possibility to everyday life.
+              </p>
+              <div className="flex items-center w-2/3">
+                <div className="flex flex-col justify-between phone:w-full">
+                  <ul className="lg:space-y-5 md:space-y-4 phone:space-y-1">
+                    <li className="flex items-center md:text-sm phone:text-[6px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
+                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
+                      Industrial Design
+                    </li>
+                    <li className="flex items-center md:text-sm phone:text-[6px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
+                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
+                      Product Design
+                    </li>
+                    <li className="flex items-center md:text-sm phone:text-[6px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
+                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
+                      UX/UI Design
+                    </li>
+                    <li className="flex items-center md:text-sm phone:text-[6px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
+                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
+                      Design for Manufacturing
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-end absolute w-3/4 phone:w-4/5 h-full py-10">
+            <Image
+              src={motor}
+              alt="Design Image"
+              className="w-full h-full"
+              objectFit="cover"
+            />
+          </div>
         </div>
 
-        <div className="w-screen h-full xl:mb-60 lg:mb-0 md:mb-0 sm:mb-0 flex flex-col items-center justify-center">
+        <div className="w-screen h-full flex flex-col items-center justify-center">
           <div className="w-full bg-[#DCDC28] relative py-10 flex flex-col items-center justify-center max-w-[1326px]">
             <div className="text-center lg:px-40">
-              <h2 className="text-4xl font-bold">Our Work</h2>
-              <p className="mt-4 lg:text-lg xxxsm:text-sm px-10">
+              <h2 className="phone:text-2xl text-4xl font-bold">Our Work</h2>
+              <p className="mt-4 phone:text-textXs lg:text-lg phone:text-sm px-14">
                 Every product we design has its own unique impact on its users.
                 We strive to evoke emotions and create experiences that resonate
                 on a personal level.
@@ -268,7 +322,7 @@ const Index = () => {
             </div>
             <div className="absolute bottom-0 right-0 ">
               <div className="rounded-full bottom-0 right-0 shadow-md flex items-center justify-center">
-                <Image src={footerImage} alt="logo" width={80} height={80} />
+                <Image src={clearLogo} alt="logo" className="w-16 h-16" />
               </div>
             </div>
           </div>
@@ -276,7 +330,7 @@ const Index = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className={`relative cursor-pointer transition-all duration-500 ease-in-out h-80 xxxsm:h-[200px] xxsm:h-[200px] xxsm:h-[200px] sm:h-[250px] lg:h-[320px] ${
+                className={`relative cursor-pointer transition-all duration-500 ease-in-out h-80 phone:h-[180px] sm:h-[250px] lg:h-[320px] ${
                   hoveredIndex !== null && hoveredIndex !== index
                     ? `blur-sm`
                     : ""
@@ -306,29 +360,29 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-screen h-max-content lg:mb-24 xxxsm:mb-8 mt-5">
-          <div className="lg:text-6xl xxxsm:text-2xl font-medium">
+        <div className="flex flex-col items-center justify-center w-screen h-max-content my-10 gap-4">
+          <div className="lg:text-4xl phone:text-xl font-medium">
             Recognitions
           </div>
-          <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative mt-4 xl:h-40 lg:h-20 md:h-16 sm:h10 h-8 backdrop-blur-sm bg-white/20">
-            <div className="flex animate-marquee  items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10">
+          <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative mt-4 xl:h-24 lg:h-20 md:h-16 sm:h-10 phone:h-8 backdrop-blur-sm bg-white/20">
+            <div className="flex animate-marquee  items-center">
               {sliderImages.map((item, index) => (
                 <div
                   key={index}
-                  className="flex w-max h-full items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10"
+                  className="flex w-max h-full items-center gap-10 mr-10 xl:gap-20 xl:mr-20"
                 >
-                  <span className="bg-[#DCDC28] rounded-full w-4 h-4" />
+                  <span className="bg-[#DCDC28] rounded-full w-2 h-2 z-40" />
                   <Image className="w-max h-full" src={item.src} alt="images" />
                 </div>
               ))}
             </div>
-            <div className="flex animate-marquee  items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10">
+            <div className="flex animate-marquee  items-center">
               {sliderImages.map((item, index) => (
                 <div
                   key={index}
-                  className="flex w-max h-full items-center xl:gap-10 lg:gap-16 md:gap-12 sm:gap-10"
+                  className="flex w-max h-full items-center gap-10 mr-10 xl:gap-20 xl:mr-20"
                 >
-                  <span className="bg-[#DCDC28] rounded-full w-4 h-4" />
+                  <span className="bg-[#DCDC28] rounded-full w-2 h-2 z-40" />
                   <Image className="w-max h-full" src={item.src} alt="images" />
                 </div>
               ))}
@@ -338,9 +392,11 @@ const Index = () => {
 
         <ScrollImages />
 
-        <div className="w-full h-full z-50 flex flex-wrap items-center justify-between space-x-8 max-w-[1326px] ">
-          <div className="relative sm:w-2/4 xxxsm:w-full overflow-hidden">
-            <h2 className="text-center text-4xl font-bold">Our Impact</h2>
+        <div className="w-full h-full z-40 flex flex-wrap items-center justify-between space-x-8 max-w-[1326px] ">
+          <div className="relative xxmd:w-2/4 overflow-hidden">
+            <h2 className="text-center text-4xl font-bold xxmd:hidden mt-12">
+              Our Impact
+            </h2>
             <Carousel className="h-full" {...settings}>
               {sliderCardData.map((item, index) => (
                 <SliderCard
@@ -356,7 +412,7 @@ const Index = () => {
             </Carousel>
           </div>
 
-          <div className="w-1/4 flex flex-col items-end justify-end xxxsm:block text-end xxxsm:hidden lg:block">
+          <div className="w-1/4 flex flex-col items-end justify-end phone:block text-end phone:hidden md:hidden xxmd:block lg:block">
             <h2 className="text-4xl font-bold">Our Impact</h2>
             <p className="mt-4 text-gray-500 text-end">
               Our design fosters collaboration, resonates with users, and

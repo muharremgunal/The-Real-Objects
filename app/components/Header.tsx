@@ -45,13 +45,13 @@ const Header = () => {
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } md:flex space-x-4 z-50 gap-4 bg-white md:bg-transparent md:static absolute top-16 left-0 right-0 md:top-12 md:left-auto md:right-auto md:space-x-4 md:flex-row flex flex-col items-center`}
+          } md:flex z-50 h-screen gap-4 px-4 phone:w-full phone:bg-white/80 bg-white md:bg-transparent md:static absolute top-16 left-0 right-0 md:top-12 md:left-auto md:right-auto md:space-x-4 md:flex-row flex flex-col items-center`}
         >
           {navbarText.map((item) => (
             <Link
               key={item.id}
               href={item.href}
-              className={`px-2 py-1 md:w-full mt-2 mb-2 ${item.color} lg:min-w-max border border-nav-bg rounded-md sm:text-textXs lg:text-textMd xl:text-textMd bg-transparent ${item.hover}`}
+              className={`px-2 py-1 phone:w-full text-center phone:py-6 phone:px-10 mt-2 mb-2 ${item.color} lg:min-w-max border border-nav-bg rounded-md sm:text-textXs lg:text-textMd xl:text-textMd bg-transparent ${item.hover}`}
             >
               {item.name}
             </Link>
@@ -63,3 +63,5 @@ const Header = () => {
 };
 
 export default Header;
+/* phone:flex z-50 phone:h-screen gap-4 px-4 phone:w-full phone:bg-white/80 absolute top-16 left-0 md:top-12 md:space-x-4 md:flex-row flex flex-col items-center */
+//className={`px-2 py-1 phone:w-full  phone:w-full text-center phone:py-6 phone:px-10 mt-2 mb-2 ${item.color} lg:min-w-max phone:border-gray-400 border border-nav-bg rounded-md sm:text-textXs lg:text-textMd xl:text-textMd bg-transparent ${item.hover}`}

@@ -17,7 +17,7 @@ export default function MouseFollower() {
 
   return (
     <div
-      className="fixed text-white bg-[#DCDC28] blur rounded-full pointer-events-none z-50"
+      className="fixed text-white border-[#DCDC28] border-2 rounded-full pointer-events-none z-50"
       style={{
         top: `${position.y}px`,
         left: `${position.x}px`,

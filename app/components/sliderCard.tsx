@@ -10,8 +10,8 @@ const SliderCard = ({
   cardTitle,
 }: any) => {
   return (
-    <div className="flex flex-col justify-center p-4 items-center rounded-3xl h-full ">
-      <div className="relative w-full h-40 xl:h-72 lg:h-36 md:h-24 sm:h-20">
+    <div className="flex flex-col justify-center p-4 items-center rounded-3xl h-full mt-10">
+      <div className="relative w-full h-72 xl:h-80 lg:h-72 md:h-64 sm:h-40 phone:h-40">
         <Image
           src={src}
           alt={alt}

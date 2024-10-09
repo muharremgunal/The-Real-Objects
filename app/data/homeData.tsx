@@ -23,7 +23,7 @@ export const sliderData = [
   "Trend Analysis",
   "Color,Material,Finish",
   "Design for Manufacturing",
-  "User Experience",
+  "UX/UI Design",
 ];
 
 export const sliderImages = [

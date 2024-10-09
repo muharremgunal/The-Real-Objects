@@ -1,42 +1,88 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import woolly from "../../public/assets/images/woolly.png";
-import brick from "../../public/assets/images/brick.png";
-import brick2 from "../../public/assets/images/brick2.png";
-import Olive from "../../public/assets/images/t-olive.png";
-import coffe2 from "../../public/assets/images/coffe2.png";
+import Image1 from "../../public/assets/images/ourServiceImages/1.png";
+import Image2 from "../../public/assets/images/ourServiceImages/2.png";
+import Image3 from "../../public/assets/images/ourServiceImages/3.png";
+import Image4 from "../../public/assets/images/ourServiceImages/4.png";
+import Image5 from "../../public/assets/images/ourServiceImages/5.png";
+import Image6 from "../../public/assets/images/ourServiceImages/6.png";
+import Image7 from "../../public/assets/images/ourServiceImages/7.png";
+import Image8 from "../../public/assets/images/ourServiceImages/8.png";
+import Image9 from "../../public/assets/images/ourServiceImages/9.png";
+import Image10 from "../../public/assets/images/ourServiceImages/10.png";
 import { Scrollama, Step } from "react-scrollama";
 
 const ScrollImages = () => {
   const scrollImages = [
     {
-      src: brick,
+      src: Image1,
       alt: "Brick",
-      text: "Design Brick",
-      hiddenText: "desktop mobile area",
+      number: "01",
+      text: "Industrial/Product Design",
+      hiddenText:
+        "Our industrial design adapts to a world in constant change, creating products that truly matter.",
     },
     {
-      src: woolly,
+      src: Image2,
       alt: "Woolly",
-      text: "Woolly Design",
+      number: "02",
+      text: "Branding Design",
       hiddenText: "wolly coffe machine",
     },
     {
-      src: brick2,
+      src: Image3,
       alt: "Image One",
-      text: "Creative One",
+      number: "03",
+      text: "Product Visualization",
       hiddenText: "desktop mobile area",
     },
     {
-      src: Olive,
+      src: Image4,
       alt: "Olive",
-      text: "Olive Product",
+      number: "04",
+      text: "Design consultancy",
       hiddenText: "desktop mobile area",
     },
     {
-      src: coffe2,
+      src: Image5,
+      alt: "3D Modeling",
+      number: "05",
+      text: "3D Modeling",
+      hiddenText: "desktop mobile area",
+    },
+    {
+      src: Image6,
+      alt: "Prototyping",
+      number: "06",
+      text: "Prototyping",
+      hiddenText: "desktop mobile area",
+    },
+    {
+      src: Image7,
       alt: "Olive",
-      text: "Coffe Product",
+      number: "07",
+      text: "Market Research",
+      hiddenText: "desktop mobile area",
+    },
+    {
+      src: Image8,
+      alt: "Olive",
+      number: "08",
+      text: "Color, Material, Finish",
+      hiddenText: "desktop mobile area",
+    },
+    {
+      src: Image9,
+      alt: "Olive",
+      number: "09",
+      text: "Design For Manufacturing",
+      hiddenText: "desktop mobile area",
+    },
+    {
+      src: Image10,
+      alt: "Olive",
+      number: "10",
+      text: "UX/UI Design",
       hiddenText: "desktop mobile area",
     },
   ];
@@ -63,19 +109,24 @@ const ScrollImages = () => {
         ))}
       </div>
       <div className="h-[300vh] overflow-hidden absolute top-24 w-full z-40">
-        <div className="lg:text-6xl xxxsm:text-4xl w-full h-[500px] font-bold flex items-center mt-[200px] justify-center text-white left-40">
+        <div className="lg:text-6xl phone:text-4xl w-full h-[500px] font-bold flex items-center mt-[200px] justify-center text-white left-40">
           Our Expertise
         </div>
         <Scrollama offset={0.6} onStepEnter={onStepEnter}>
           {scrollImages.map((image, index) => (
             <Step data={index} key={index}>
-              <div className="h-[300px] flex items-start text-start justify-start left-40 lg:ml-40 xxxsm:ml-10">
+              <span className="web:h-[150px] xxxxsm:h-[110px] xxxsm:h-[150px] xxsm:h-[160px] xsm:h-[170px] xxxmd:h-[190px] xxmd:h-[240px] xmd:h-[280px] flex items-start text-start justify-start left-40 web:ml-32 phone:ml-5 xxxmd:ml-5 xxmd:ml-5 xmd:ml-5">
+                {currentStepIndex === index && (
+                  <div className="lg:text-7xl phone:text-7xl text-white mr-2 font-normal opacity-60 inline">
+                    {image.number}
+                  </div>
+                )}
                 <div
-                  className={`text-4xl text-white font-bold lg:w-1/2 xxxsm:w-full ${
-                    currentStepIndex === index ? "opacity-100" : "opacity-60"
+                  className={`flex flex-col lg:text-2xl phone:text-2xl text-white font-bold lg:w-1/2 xxxsm:w-full gap-3 mt-2 ${
+                    currentStepIndex === index ? "opacity-100" : "opacity-50"
                   } inline`}
                 >
-                  <span className="whitespace-normal">
+                  <span className="w-[190px] h-[60px]">
                     {image.text.split(" ")?.map((word, i) => (
                       <span
                         key={i}
@@ -89,20 +140,17 @@ const ScrollImages = () => {
                       </span>
                     ))}
                   </span>
-                  {currentStepIndex === index ? (
-                    <div className="text-4xl font-normal opacity-60 inline">
+                  {/* {currentStepIndex === index ? (
+                    <div className="text-4xl phone:text-xl font-normal opacity-60 inline">
                       {image.hiddenText}
                     </div>
                   ) : (
                     ""
-                  )}
+                  )} */}
                 </div>
-              </div>
+              </span>
             </Step>
           ))}
-          {scrollImages.length - 1 && (
-            <div className="absolute text-6xl w-full bg-white h-[300px] mt-[100px] flex items-center justify-center text-white"></div>
-          )}
         </Scrollama>
       </div>
     </div>
