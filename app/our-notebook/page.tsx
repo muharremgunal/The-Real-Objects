@@ -1,6 +1,6 @@
 import Comingsoon from "../../public/assets/images/comingsoon.png";
 
-const ContactPage = () => {
+const OurNotebookPage = () => {
   return (
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center -mb-32"
@@ -21,4 +21,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default OurNotebookPage;

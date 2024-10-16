@@ -109,24 +109,24 @@ const ScrollImages = () => {
         ))}
       </div>
       <div className="h-[300vh] overflow-hidden absolute top-24 w-full z-40">
-        <div className="lg:text-6xl phone:text-4xl w-full h-[500px] font-bold flex items-center mt-[200px] justify-center text-white left-40">
+        <div className="lg:text-6xl phone:text-4xl lg:text-6xl md:text-6xl xxmd:text-6xl w-full h-[500px] font-bold flex items-center mt-[200px] justify-center text-white left-40">
           Our Expertise
         </div>
         <Scrollama offset={0.6} onStepEnter={onStepEnter}>
           {scrollImages.map((image, index) => (
             <Step data={index} key={index}>
-              <span className="web:h-[150px] xxxxsm:h-[110px] xxxsm:h-[150px] xxsm:h-[160px] xsm:h-[170px] xxxmd:h-[190px] xxmd:h-[240px] xmd:h-[280px] flex items-start text-start justify-start left-40 web:ml-32 phone:ml-5 xxxmd:ml-5 xxmd:ml-5 xmd:ml-5">
+              <span className="xxxxsm:h-[110px] xxxsm:h-[140px] xxsm:h-[160px] xsm:h-[170px] xxxmd:h-[190px] xxmd:h-[240px] xmd:h-[280px] web:h-[250px] flex items-start text-start justify-start left-40 web:ml-32 phone:ml-5 xxxmd:ml-5 xxmd:ml-5 xmd:ml-5">
                 {currentStepIndex === index && (
-                  <div className="lg:text-7xl phone:text-7xl text-white mr-2 font-normal opacity-60 inline">
+                  <div className="sm:text-8xl lg:text-8xl xxmd:text-8xl md::text-8xl phone:text-5xl text-white mr-2 font-normal opacity-60 inline">
                     {image.number}
                   </div>
                 )}
                 <div
-                  className={`flex flex-col lg:text-2xl phone:text-2xl text-white font-bold lg:w-1/2 xxxsm:w-full gap-3 mt-2 ${
+                  className={`flex flex-col text-start lg:text-4xl md:text-4xl air:text-4xl xxmd:text-4xl web:text-4xl phone:text-md text-white font-bold lg:w-1/2 xxxsm:w-1/2 gap-3 mt-2 phone:mt-0 ${
                     currentStepIndex === index ? "opacity-100" : "opacity-50"
                   } inline`}
                 >
-                  <span className="w-[190px] h-[60px]">
+                  <span className="phone:w-[140px] web:w-[190px] h-[60px]">
                     {image.text.split(" ")?.map((word, i) => (
                       <span
                         key={i}

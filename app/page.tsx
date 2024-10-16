@@ -2,20 +2,18 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import firstImage from "../public/assets/images/firstImage.png";
-import woolly from "../public/assets/images/woolly.png";
-import brick from "../public/assets/images/brick.png";
-import Olivey from "../public/assets/images/olivey.png";
-import motor from "../public/assets/images/motor.png";
-import vicle from "../public/assets/images/vicle.jpeg";
-import coffe from "../public/assets/images/caffe.jpeg";
+import Image1 from "../public/assets/images/ourWork/1.png";
+import Image2 from "../public/assets/images/ourWork/2.png";
+import Image3 from "../public/assets/images/ourWork/3.png";
+import Image4 from "../public/assets/images/ourWork/4.png";
+import Image5 from "../public/assets/images/ourWork/5.png";
+import Image6 from "../public/assets/images/ourWork/6.png";
+import Image7 from "../public/assets/images/ourWork/7.png";
+import Image8 from "../public/assets/images/ourWork/8.png";
+import Image9 from "../public/assets/images/ourWork/9.png";
 import clearLogo from "../public/assets/images/clearLogo.png";
-import {
-  scrollImages,
-  sliderCardData,
-  sliderData,
-  sliderImages,
-} from "./data/homeData";
+import motor from "../public/assets/images/motor.png";
+import { sliderCardData, sliderData, sliderImages } from "./data/homeData";
 import Link from "next/link";
 import ScrollImages from "./components/ScrollImages";
 import { Carousel } from "antd";
@@ -26,7 +24,7 @@ const Index = () => {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
   const images = [
     {
-      src: brick,
+      src: Image1,
       alt: "Image 1",
       href: "/detail/img1",
       text: (
@@ -36,12 +34,12 @@ const Index = () => {
           <span className="text-sm font-semibold">Soft Mornings</span>
         </div>
       ),
-      bg: "bg-[#FFCE31]",
+      bg: "bg-black",
       colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
       rowSpan: "row-span-3",
     },
     {
-      src: woolly,
+      src: Image2,
       alt: "Image 2",
       href: "/detail/img2",
       text: (
@@ -51,12 +49,12 @@ const Index = () => {
           <span className="text-sm font-semibold">Soft Mornings</span>
         </div>
       ),
-      bg: "bg-green-300",
+      bg: "bg-black",
       colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
       rowSpan: "row-span-3",
     },
     {
-      src: brick,
+      src: Image3,
       alt: "Image 3",
       href: "/detail/img3",
       text: (
@@ -71,7 +69,7 @@ const Index = () => {
       rowSpan: "row-span-3",
     },
     {
-      src: coffe,
+      src: Image4,
       alt: "Image 4",
       href: "/detail/img4",
       text: (
@@ -86,7 +84,7 @@ const Index = () => {
       rowSpan: "row-span-3",
     },
     {
-      src: vicle,
+      src: Image5,
       alt: "Image 2",
       href: "/detail/img2",
       text: (
@@ -101,7 +99,7 @@ const Index = () => {
       rowSpan: "row-span-3",
     },
     {
-      src: brick,
+      src: Image6,
       alt: "Image 3",
       href: "/detail/img3",
       text: (
@@ -116,7 +114,7 @@ const Index = () => {
       rowSpan: "row-span-3",
     },
     {
-      src: brick,
+      src: Image7,
       alt: "Image 3",
       href: "/detail/img3",
       text: (
@@ -131,7 +129,7 @@ const Index = () => {
       rowSpan: "row-span-3",
     },
     {
-      src: brick,
+      src: Image8,
       alt: "Image 3",
       href: "/detail/img3",
       text: (
@@ -146,7 +144,7 @@ const Index = () => {
       rowSpan: "row-span-3",
     },
     {
-      src: Olivey,
+      src: Image9,
       alt: "Image 2",
       href: "/detail/img2",
       text: (
@@ -177,7 +175,7 @@ const Index = () => {
     <div className="w-screen h-auto">
       <Image
         objectFit="contain"
-        src={firstImage}
+        src={Image1}
         alt="Logo"
         className="w-screen phone:h-[600px]  sm:h-[550px] lg:h-[800px]"
       />
@@ -190,8 +188,8 @@ const Index = () => {
                 key={index}
                 className="flex items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10"
               >
-                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2 w-3 h-3 mr-2"></span>
-                <span className="xl:w-60 lg:w-40 md:w-20 sm:w-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2">
+                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2 w-4 h-4 mr-2"></span>
+                <span className="px-20 phone:px-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2 text-white">
                   {item}
                 </span>
               </div>
@@ -203,8 +201,8 @@ const Index = () => {
                 key={index}
                 className="flex items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10"
               >
-                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2  w-3 h-3 mr-2"></span>
-                <span className="xl:w-60 lg:w-40 md:w-20 sm:w-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2">
+                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2 w-4 h-4 mr-2"></span>
+                <span className="px-20 phone:px-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2 text-white">
                   {item}
                 </span>
               </div>
@@ -371,7 +369,7 @@ const Index = () => {
                   key={index}
                   className="flex w-max h-full items-center gap-10 mr-10 xl:gap-20 xl:mr-20"
                 >
-                  <span className="bg-[#DCDC28] rounded-full w-2 h-2 z-40" />
+                  <span className="bg-[#DCDC28] rounded-full w-4 h-4 phone:w-2 phone:h-2 z-40" />
                   <Image className="w-max h-full" src={item.src} alt="images" />
                 </div>
               ))}
@@ -382,7 +380,7 @@ const Index = () => {
                   key={index}
                   className="flex w-max h-full items-center gap-10 mr-10 xl:gap-20 xl:mr-20"
                 >
-                  <span className="bg-[#DCDC28] rounded-full w-2 h-2 z-40" />
+                  <span className="bg-[#DCDC28] rounded-full w-4 h-4 phone:w-2 phone:h-2 z-40" />
                   <Image className="w-max h-full" src={item.src} alt="images" />
                 </div>
               ))}

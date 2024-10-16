@@ -4,6 +4,7 @@ export const navbarText = [
     name: "Home",
     hover: "hover:bg-[#DCDC28]",
     color: "hover:text-white",
+    border: "hover:border-[#DCDC28]",
     href: "/",
   },
   {
@@ -11,6 +12,7 @@ export const navbarText = [
     name: "Projects",
     hover: "hover:bg-[#EB6854]",
     color: "hover:text-white",
+    border: "hover:border-[#EB6854]",
     href: "/projects",
   },
   {
@@ -18,6 +20,7 @@ export const navbarText = [
     name: "About",
     hover: "hover:bg-[#647ACD]",
     color: "hover:text-white",
+    border: "hover:border-[#647ACD]",
     href: "/about",
   },
   {
@@ -25,6 +28,7 @@ export const navbarText = [
     name: "Contact",
     hover: "hover:bg-[#FBD51B]",
     color: "hover:text-white",
+    border: "hover:border-[#FBD51B]",
     href: "/contact",
   },
   {
@@ -32,6 +36,7 @@ export const navbarText = [
     name: "Our Notebook",
     hover: "hover:bg-[#DCDC28]",
     color: "hover:text-white",
-    href: "/partner",
+    border: "hover:border-[#DCDC28]",
+    href: "/our-notebook",
   },
 ];

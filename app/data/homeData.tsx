@@ -1,11 +1,24 @@
-import recognitions1 from "../../public/assets/images/recognitions1.png";
-import recognitions2 from "../../public/assets/images/recognitions2.png";
-import recognitions3 from "../../public/assets/images/recognitions3.webp";
-import recognitions4 from "../../public/assets/images/recognitions4.jpg";
-import recognitions5 from "../../public/assets/images/recognitions5.webp";
-import recognitions7 from "../../public/assets/images/recognitions7.jpg";
-import recognitions8 from "../../public/assets/images/recognitions8.png";
-import recognitions9 from "../../public/assets/images/recognitions9.png";
+import recognitions1 from "../../public/assets/images/recognise/1.png";
+import recognitions2 from "../../public/assets/images/recognise/2.png";
+import recognitions3 from "../../public/assets/images/recognise/3.png";
+import recognitions4 from "../../public/assets/images/recognise/4.png";
+import recognitions5 from "../../public/assets/images/recognise/5.png";
+import recognitions6 from "../../public/assets/images/recognise/6.png";
+import recognitions7 from "../../public/assets/images/recognise/7.png";
+import recognitions8 from "../../public/assets/images/recognise/8.png";
+import recognitions9 from "../../public/assets/images/recognise/9.png";
+
+export const sliderImages = [
+  { src: recognitions1, alt: "recognitions1" },
+  { src: recognitions2, alt: "recognitions2" },
+  { src: recognitions3, alt: "recognitions3" },
+  { src: recognitions4, alt: "recognitions4" },
+  { src: recognitions5, alt: "recognitions5" },
+  { src: recognitions6, alt: "recognitions7" },
+  { src: recognitions7, alt: "recognitions8" },
+  { src: recognitions8, alt: "recognitions9" },
+  { src: recognitions9, alt: "recognitions9" },
+];
 
 import woolly from "../../public/assets/images/woolly.png";
 import brick from "../../public/assets/images/brick.png";
@@ -24,17 +37,6 @@ export const sliderData = [
   "Color,Material,Finish",
   "Design for Manufacturing",
   "UX/UI Design",
-];
-
-export const sliderImages = [
-  { src: recognitions1, alt: "recognitions1" },
-  { src: recognitions2, alt: "recognitions2" },
-  { src: recognitions3, alt: "recognitions3" },
-  { src: recognitions4, alt: "recognitions4" },
-  { src: recognitions5, alt: "recognitions5" },
-  { src: recognitions7, alt: "recognitions7" },
-  { src: recognitions8, alt: "recognitions8" },
-  { src: recognitions9, alt: "recognitions9" },
 ];
 
 export const scrollImages = [

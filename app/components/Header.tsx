@@ -45,13 +45,13 @@ const Header = () => {
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } md:flex z-50 h-screen gap-4 px-4 phone:w-full phone:bg-white/80 bg-white md:bg-transparent md:static absolute top-16 left-0 right-0 md:top-12 md:left-auto md:right-auto md:space-x-4 md:flex-row flex flex-col items-center`}
+          } md:flex z-50 h-screen gap-4 px-4 phone:w-full phone:bg-white/80 bg-white md:bg-transparent md:static absolute top-20 left-0 right-0 md:top-12 md:left-auto md:right-auto md:space-x-4 md:flex-row flex flex-col items-center`}
         >
           {navbarText.map((item) => (
             <Link
               key={item.id}
               href={item.href}
-              className={`px-2 py-1 phone:w-full text-center phone:py-6 phone:px-10 mt-2 mb-2 ${item.color} lg:min-w-max border border-nav-bg rounded-md sm:text-textXs lg:text-textMd xl:text-textMd bg-transparent ${item.hover}`}
+              className={`px-2 py-1 phone:w-full text-center phone:py-6 phone:px-10 mt-4 mb-2 ${item.color} ${item.border} lg:min-w-max border border-gray-300 rounded-md sm:text-textXs lg:text-textMd xl:text-textLg bg-transparent ${item.hover}`}
             >
               {item.name}
             </Link>

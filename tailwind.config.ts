@@ -14,6 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Open Sans", "sans-serif"],
+        custom: ["Zilla Slab Highlight", "serif"],
       },
       fontSize: {
         textXxxs: "6px",
@@ -42,6 +43,9 @@ const config: Config = {
         phone: { max: "767px" },
         web: { min: "1025px" },
         air: "820px",
+      },
+      backgroundImage: {
+        "grid-pattern": "url('/1.png')",
       },
     },
   },
