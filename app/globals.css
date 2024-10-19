@@ -21,3 +21,15 @@ html {
   animation: marquee 50s linear infinite;
   animation-iteration-count: infinite;
 }
+
+.ant-carousel .slick-list {
+  overflow: visible;
+}
+
+.slick-list .slick-slide:not(.slick-active) {
+  transform: scale(0.92);
+}
+
+.slick-list .slick-slide {
+  transition: transform 0.5s ease;
+}

@@ -33,7 +33,8 @@ const config: Config = {
         "custom-ease": "cubic-bezier(0.4, 0, 0.2, 1)",
       },
       screens: {
-        xxxxsm: "360px",
+        xxxxxsm: "360px",
+        xxxxsm: "375px",
         xxxsm: "390px",
         xxsm: "414px",
         xsm: "430px",

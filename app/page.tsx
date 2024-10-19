@@ -26,7 +26,7 @@ const Index = () => {
     {
       src: Image1,
       alt: "Image 1",
-      href: "/detail/img1",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -41,7 +41,7 @@ const Index = () => {
     {
       src: Image2,
       alt: "Image 2",
-      href: "/detail/img2",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -56,7 +56,7 @@ const Index = () => {
     {
       src: Image3,
       alt: "Image 3",
-      href: "/detail/img3",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -71,7 +71,7 @@ const Index = () => {
     {
       src: Image4,
       alt: "Image 4",
-      href: "/detail/img4",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -86,7 +86,7 @@ const Index = () => {
     {
       src: Image5,
       alt: "Image 2",
-      href: "/detail/img2",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -101,7 +101,7 @@ const Index = () => {
     {
       src: Image6,
       alt: "Image 3",
-      href: "/detail/img3",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -116,7 +116,7 @@ const Index = () => {
     {
       src: Image7,
       alt: "Image 3",
-      href: "/detail/img3",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -131,7 +131,7 @@ const Index = () => {
     {
       src: Image8,
       alt: "Image 3",
-      href: "/detail/img3",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -146,7 +146,7 @@ const Index = () => {
     {
       src: Image9,
       alt: "Image 2",
-      href: "/detail/img2",
+      href: "/",
       text: (
         <div className="flex flex-col items-start justify-start py-2 px-5">
           <span className="text-md font-bold">Woolly</span>
@@ -168,20 +168,20 @@ const Index = () => {
     pauseOnHover: true,
     swipeToSlide: true,
     centerMode: true,
-    centerPadding: "60px",
+    centerPadding: "40px",
   };
 
   return (
     <div className="w-screen h-auto">
       <Image
         objectFit="contain"
-        src={Image1}
+        src={Image2}
         alt="Logo"
-        className="w-screen phone:h-[600px]  sm:h-[550px] lg:h-[800px]"
+        className="w-screen phone:h-[400px] sm:h-[550px] lg:h-[800px] mt-16"
       />
       <MouseFollower />
       <div className="z-0 w-full h-full flex flex-col items-center px-3">
-        <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative xl:h-16 lg:h-12 md:h-10 sm:h-8 h-6 -mt-6 backdrop-blur-sm bg-white/20 xl:-mt-16 lg:-mt-12 md:-mt-10 sm:-mt-8">
+        <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap gap-10 relative xl:h-16 lg:h-12 md:h-10 sm:h-8 h-6 -mt-6 backdrop-blur-sm bg-white/20 xl:-mt-16 lg:-mt-12 md:-mt-10 sm:-mt-8">
           <div className="flex animate-marquee  items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10">
             {sliderData.map((item, index) => (
               <div
@@ -209,59 +209,6 @@ const Index = () => {
             ))}
           </div>
         </div>
-
-        {/*  <div className="flex items-center justify-center px-1 py-10  max-w-[1326px] h-max-content">
-          <div className="flex flex-col  md:flex-row items-start justify-between w-full">
-            <div className="phone:w-full sm:w-1/3 lg:w-2/3 md:w-2/3  phone:space-y-4 xl:space-y-16 lg:space-y-8 md:space-y-4">
-              <h1 className="md:text-xl sm:text-sm phone:text-[16px] phone:font-bold lg:text-3xl xl:text-5xl sm:text-md text-black  md:font-bold lg:font-bold">
-                For us, design is more than just making things look good.
-              </h1>
-              <p className="md:text-md lg:text-xl xl:text-2xl sm:text-sm phone:text-[12px] text-gray-700 lg:w-3/4 sm:w-full">
-                It’s our way of making real, positive change in the world. We
-                want to create products that not only serve a purpose but also
-                bring a sense of happiness and possibility to everyday life.
-              </p>
-              <div className="flex items-center">
-                <div className="flex flex-col justify-between phone:w-3/4">
-                  <ul className="lg:space-y-5 md:space-y-4 phone:space-y-4">
-                    <li className="flex items-center md:text-sm phone:text-[8px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
-                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mr-2"></span>
-                      Industrial Design
-                    </li>
-                    <li className="flex items-center md:text-sm phone:text-[8px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
-                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mr-2"></span>
-                      Product Design
-                    </li>
-                    <li className="flex items-center md:text-sm phone:text-[8px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
-                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mr-2"></span>
-                      UX/UI Design
-                    </li>
-                    <li className="flex items-center md:text-sm phone:text-[8px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
-                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mr-2"></span>
-                      Design for Manufacturing
-                    </li>
-                  </ul>
-                </div>
-                <div className="w-full lg:-ml-[400px] md:-ml-[150px] h-full md:hidden">
-                  <Image
-                    src={motor}
-                    alt="Design Image"
-                    className="w-full h-full"
-                    objectFit="cover"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="w-full lg:-ml-[400px] md:-ml-[150px] h-full phone:hidden">
-              <Image
-                src={motor}
-                alt="Design Image"
-                className="w-full h-full"
-                objectFit="cover"
-              />
-            </div>
-          </div>
-        </div> */}
 
         <div className="flex relative items-center justify-end px-1 py-10  max-w-[1326px] h-max-content">
           <div className="flex flex-col md:flex-row items-start justify-between w-full">
@@ -390,12 +337,14 @@ const Index = () => {
 
         <ScrollImages />
 
-        <div className="w-full h-full z-40 flex flex-wrap items-center justify-between space-x-8 max-w-[1326px] ">
+        <div className="w-full h-full z-40 flex flex-wrap items-center justify-between space-x-4 max-w-[1326px] ">
           <div className="relative xxmd:w-2/4 overflow-hidden">
-            <h2 className="text-center text-4xl font-bold xxmd:hidden mt-12">
-              Our Impact
-            </h2>
-            <Carousel className="h-full" {...settings}>
+            <div className="flex items-center justify-center mt-12 w-full">
+              <h4 className="text-center text-3xl font-semibold xxmd:hidden bg-[#DCDC28] px-14">
+                Our Impact
+              </h4>
+            </div>
+            <Carousel className="carousel-card h-full" {...settings}>
               {sliderCardData.map((item, index) => (
                 <SliderCard
                   key={index}
@@ -411,7 +360,11 @@ const Index = () => {
           </div>
 
           <div className="w-1/4 flex flex-col items-end justify-end phone:block text-end phone:hidden md:hidden xxmd:block lg:block">
-            <h2 className="text-4xl font-bold">Our Impact</h2>
+            <div className="flex items-end justify-end mt-12 w-full">
+              <h4 className="text-center text-2xl font-semibold bg-[#DCDC28] pl-24">
+                Our Impact
+              </h4>
+            </div>
             <p className="mt-4 text-gray-500 text-end">
               Our design fosters collaboration, resonates with users, and
               attracts investors. Our award-winning process enhances user
