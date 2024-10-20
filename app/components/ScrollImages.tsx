@@ -115,7 +115,7 @@ const ScrollImages = () => {
         <Scrollama offset={0.5} onStepEnter={onStepEnter}>
           {scrollImages.map((image, index) => (
             <Step data={index} key={index}>
-              <span className="xxxxsm:h-[125px] xxxsm:h-[170px] xxxxxsm:h-[140px] xxsm:h-[180px] xsm:h-[190px] xxxmd:h-[220px] xxmd:h-[260px] xmd:h-[320px] web:h-[170px] flex items-start text-start justify-start left-40 web:ml-32 phone:ml-5 xxxmd:ml-5 xxmd:ml-5 xmd:ml-5">
+              <span className="xxxxsm:h-[125px] xxxsm:h-[170px] xxxxxsm:h-[140px] xxsm:h-[180px] xsm:h-[190px] xxxmd:h-[220px] xxmd:h-[260px] xmd:h-[320px] web:h-[280px] flex items-start text-start justify-start left-40 web:ml-32 phone:ml-5 xxxmd:ml-5 xxmd:ml-5 xmd:ml-5">
                 {currentStepIndex === index && (
                   <div className="sm:text-8xl lg:text-8xl xxmd:text-8xl md::text-8xl phone:text-5xl text-white mr-2 font-normal opacity-60 inline">
                     {image.number}
@@ -140,13 +140,6 @@ const ScrollImages = () => {
                       </span>
                     ))}
                   </span>
-                  {/* {currentStepIndex === index ? (
-                    <div className="text-4xl phone:text-xl font-normal opacity-60 inline">
-                      {image.hiddenText}
-                    </div>
-                  ) : (
-                    ""
-                  )} */}
                 </div>
               </span>
             </Step>

@@ -51,7 +51,8 @@ const Header = () => {
             <Link
               key={item.id}
               href={item.href}
-              className={`px-2 py-1 phone:w-full text-center phone:py-6 phone:px-10 mt-4 mb-2 ${item.color} ${item.border} lg:min-w-max border border-gray-300 rounded-md sm:text-textXs lg:text-textMd xl:text-textLg bg-transparent ${item.hover}`}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`px-2 py-1 phone:w-full text-center phone:py-6 phone:px-10 mt-4 mb-2 ${item.color} ${item.border} lg:min-w-max border border-gray-400 rounded-md sm:text-textXs lg:text-textMd xl:text-textLg bg-transparent ${item.hover}`}
             >
               {item.name}
             </Link>
@@ -63,5 +64,3 @@ const Header = () => {
 };
 
 export default Header;
-/* phone:flex z-50 phone:h-screen gap-4 px-4 phone:w-full phone:bg-white/80 absolute top-16 left-0 md:top-12 md:space-x-4 md:flex-row flex flex-col items-center */
-//className={`px-2 py-1 phone:w-full  phone:w-full text-center phone:py-6 phone:px-10 mt-2 mb-2 ${item.color} lg:min-w-max phone:border-gray-400 border border-nav-bg rounded-md sm:text-textXs lg:text-textMd xl:text-textMd bg-transparent ${item.hover}`}
