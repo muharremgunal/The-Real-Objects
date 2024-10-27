@@ -112,42 +112,45 @@ const ScrollImages = () => {
         <div className="lg:text-6xl phone:text-4xl lg:text-6xl md:text-6xl xxmd:text-6xl w-full h-[300px] font-bold flex items-center mt-[100px] justify-center text-white left-40">
           Our Expertise
         </div>
-        <Scrollama offset={0.5} onStepEnter={onStepEnter}>
-          {scrollImages.map((image, index) => (
-            <Step data={index} key={index}>
-              <span className="xxxxsm:h-[125px] xxxsm:h-[170px] xxxxxsm:h-[140px] xxsm:h-[180px] xsm:h-[190px] xxxmd:h-[220px] xxmd:h-[260px] xmd:h-[320px] web:h-[280px] flex items-start text-start justify-start left-40 web:ml-32 phone:ml-5 xxxmd:ml-5 xxmd:ml-5 xmd:ml-5">
-                {currentStepIndex === index && (
-                  <div className="sm:text-8xl lg:text-8xl xxmd:text-8xl md::text-8xl phone:text-5xl text-white mr-2 font-normal opacity-60 inline">
-                    {image.number}
+        <div className="phone:h-[60%] md:h-[70%] lg:h-[66%] xl:h-[66%] 2xl:h-[66%] flex flex-col justify-around">
+          <Scrollama offset={0.6} onStepEnter={onStepEnter}>
+            {scrollImages.map((image, index) => (
+              <Step data={index} key={index}>
+                <span className="flex items-start text-start justify-start left-40 web:ml-32 phone:ml-5 xxxmd:ml-5 xxmd:ml-5 xmd:ml-5">
+                  {currentStepIndex === index && (
+                    <div className="sm:text-8xl lg:text-8xl xxmd:text-8xl md::text-8xl phone:text-5xl text-white mr-2 font-normal opacity-60 inline">
+                      {image.number}
+                    </div>
+                  )}
+                  <div
+                    className={`flex flex-col text-start lg:text-4xl md:text-4xl air:text-4xl xxmd:text-4xl web:text-4xl phone:text-md text-white font-bold lg:w-1/2 xxxsm:w-1/2 gap-3 mt-2 phone:mt-0 ${
+                      currentStepIndex === index ? "opacity-100" : "opacity-50"
+                    } inline`}
+                  >
+                    <span className="phone:w-[140px] web:w-[280px] h-[60px]">
+                      {image.text.split(" ")?.map((word, i) => (
+                        <span
+                          key={i}
+                          className={`${
+                            currentStepIndex === index
+                              ? "opacity-100"
+                              : "opacity-30"
+                          }`}
+                        >
+                          {word}{" "}
+                        </span>
+                      ))}
+                    </span>
                   </div>
-                )}
-                <div
-                  className={`flex flex-col text-start lg:text-4xl md:text-4xl air:text-4xl xxmd:text-4xl web:text-4xl phone:text-md text-white font-bold lg:w-1/2 xxxsm:w-1/2 gap-3 mt-2 phone:mt-0 ${
-                    currentStepIndex === index ? "opacity-100" : "opacity-50"
-                  } inline`}
-                >
-                  <span className="phone:w-[140px] web:w-[280px] h-[60px]">
-                    {image.text.split(" ")?.map((word, i) => (
-                      <span
-                        key={i}
-                        className={`${
-                          currentStepIndex === index
-                            ? "opacity-100"
-                            : "opacity-30"
-                        }`}
-                      >
-                        {word}{" "}
-                      </span>
-                    ))}
-                  </span>
-                </div>
-              </span>
-            </Step>
-          ))}
-        </Scrollama>
+                </span>
+              </Step>
+            ))}
+          </Scrollama>
+        </div>
       </div>
     </div>
   );
 };
 
 export default ScrollImages;
+//xxxxsm:h-[125px] xxxsm:h-[170px] xxxxxsm:h-[140px] xxsm:h-[180px] xsm:h-[190px] xxxmd:h-[220px] xxmd:h-[260px] xmd:h-[320px] web:h-[280px]

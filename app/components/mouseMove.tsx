@@ -17,7 +17,7 @@ export default function MouseFollower() {
 
   return (
     <div
-      className="fixed text-white border-[#DCDC28] border-2 rounded-full pointer-events-none z-50"
+      className="fixed text-white border-[#DCDC28] border-2 rounded-full pointer-events-none z-50 phone:hidden"
       style={{
         top: `${position.y}px`,
         left: `${position.x}px`,
@@ -25,8 +25,6 @@ export default function MouseFollower() {
         height: "30px",
         transform: "translate(-50%, -50%)",
       }}
-    >
-      {/*  <span className="text-xs text-black">The Real Project!</span> */}
-    </div>
+    />
   );
 }

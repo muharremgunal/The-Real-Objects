@@ -5,6 +5,7 @@ import Link from "next/link";
 import navLogo from "../../public/assets/images/navLogo.png";
 import { useState } from "react";
 import { navbarText } from "../data/headerData";
+import { LuGrip } from "react-icons/lu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<Boolean>(false);
@@ -26,26 +27,13 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-800 hover:text-gray-600 focus:outline-none"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
+            <LuGrip className="w-8 h-8" />
           </button>
         </div>
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } md:flex z-50 h-screen gap-4 px-4 phone:w-full phone:bg-white/80 bg-white md:bg-transparent md:static absolute top-20 left-0 right-0 md:top-12 md:left-auto md:right-auto md:space-x-4 md:flex-row flex flex-col items-center`}
+          } md:flex z-50 phone:h-screen gap-4 px-4 phone:w-full phone:bg-white/80 bg-white md:bg-transparent md:static absolute top-20 left-0 right-0 md:top-12 md:left-auto md:right-auto md:space-x-4 md:flex-row flex flex-col items-center`}
         >
           {navbarText.map((item) => (
             <Link

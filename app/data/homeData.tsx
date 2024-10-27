@@ -8,6 +8,27 @@ import recognitions7 from "../../public/assets/images/recognise/7.png";
 import recognitions8 from "../../public/assets/images/recognise/8.png";
 import recognitions9 from "../../public/assets/images/recognise/9.png";
 
+import Image1 from "../../public/assets/images/ourWork/1.png";
+import Image2 from "../../public/assets/images/ourWork/2.png";
+import Image3 from "../../public/assets/images/ourWork/3.png";
+import Image4 from "../../public/assets/images/ourWork/4.png";
+import Image5 from "../../public/assets/images/ourWork/5.png";
+import Image6 from "../../public/assets/images/ourWork/6.png";
+import Image7 from "../../public/assets/images/ourWork/7.png";
+import Image8 from "../../public/assets/images/ourWork/8.png";
+import Image9 from "../../public/assets/images/ourWork/9.png";
+
+import carousel1 from "../../public/assets/images/ourImpact/1.png";
+import carousel2 from "../../public/assets/images/ourImpact/2.png";
+import carousel3 from "../../public/assets/images/ourImpact/3.png";
+import carousel4 from "../../public/assets/images/ourImpact/4.png";
+import carousel5 from "../../public/assets/images/ourImpact/5.png";
+import carousel6 from "../../public/assets/images/ourImpact/6.png";
+
+import socialIcon1 from "../../public/assets/images/socialIcons/1.png";
+import socialIcon2 from "../../public/assets/images/socialIcons/2.png";
+import socialIcon3 from "../../public/assets/images/socialIcons/3.png";
+
 export const sliderImages = [
   { src: recognitions1, alt: "recognitions1" },
   { src: recognitions2, alt: "recognitions2" },
@@ -19,12 +40,6 @@ export const sliderImages = [
   { src: recognitions8, alt: "recognitions9" },
   { src: recognitions9, alt: "recognitions9" },
 ];
-
-import woolly from "../../public/assets/images/woolly.png";
-import brick from "../../public/assets/images/brick.png";
-import brick2 from "../../public/assets/images/brick2.png";
-import Olive from "../../public/assets/images/t-olive.png";
-import coffe2 from "../../public/assets/images/coffe2.png";
 
 export const sliderData = [
   "Industrial Design",
@@ -39,78 +54,203 @@ export const sliderData = [
   "UX/UI Design",
 ];
 
-export const scrollImages = [
+export const sliderCardData = [
   {
-    src: brick,
+    src: carousel1,
     alt: "Brick",
-    text: "Design Brick",
-    hiddenText: "desktop mobile area",
+    cardIcon: recognitions4,
+    designerName: "JC Torres",
+    projectDescription:
+      "Tactile lamp and timer concept fosters focus and mindfulness in work-from-home arrangements",
+    color: "bg-[#647ACD]",
+    projectLink:
+      "https://www.yankodesign.com/2024/02/12/tactile-lamp-and-timer-concept-fosters-focus-and-mindfulness-in-work-from-home-arrangements/",
   },
   {
-    src: woolly,
+    src: carousel2,
     alt: "Woolly",
-    text: "Woolly Design",
-    hiddenText: "wolly coffe machine",
+    cardIcon: recognitions7,
+    designerName: "Gregory Han",
+    projectDescription:
+      "The Woolly Capsule Coffee Machine Drips With Warmly Tactile Details",
+    color: "bg-[#EB6854]",
+    projectLink: "https://design-milk.com/woolly-capsule-coffee-machine/",
   },
   {
-    src: brick2,
+    src: carousel3,
     alt: "Image One",
-    text: "Creative One",
-    hiddenText: "desktop mobile area",
+    cardIcon: recognitions5,
+    designerName: "Mickael Hemsworth",
+    projectDescription: "The Conceptual Pofu Lamp Encourages Interaction",
+    color: "bg-[#DCDC28]",
+    projectLink: "https://www.trendhunter.com/trends/pofu-lamp",
   },
   {
-    src: Olive,
+    src: carousel4,
     alt: "Olive",
-    text: "Olive Product",
-    hiddenText: "desktop mobile area",
+    cardIcon: recognitions4,
+    designerName: "Sarang Sheth",
+    projectDescription:
+      "LEGO-themed wireless charger platform proves why LEGO should build ‘fun-filled’ tech gadgets",
+    color: "bg-[#FBD51B]",
+    projectLink:
+      "https://www.yankodesign.com/2023/01/20/lego-themed-wireless-charger-platform-proves-why-lego-should-build-fun-filled-tech-gadgets/",
   },
   {
-    src: coffe2,
+    src: carousel5,
     alt: "Olive",
-    text: "Coffe Product",
-    hiddenText: "desktop mobile area",
+    cardIcon: recognitions3,
+    designerName: "Matt Bolton",
+    projectDescription:
+      "I wish I could buy this stunning OLED TV inspired by a speaker design legend",
+    color: "bg-[#EB6854]",
+    projectLink:
+      "https://www.techradar.com/opinion/i-wish-i-could-buy-this-stunning-oled-tv-inspired-by-a-speaker-design-legend",
+  },
+  {
+    src: carousel6,
+    alt: "Olive",
+    cardIcon: recognitions4,
+    designerName: "Gaurav Sood",
+    projectDescription:
+      "Take a Rest 32-inch touchscreen fits snugly besides your workstation and right in your life",
+    color: "bg-[#DCDC28]",
+    projectLink:
+      "https://www.yankodesign.com/2023/09/07/vestels-take-a-rest-32-inch-touchscreen-fits-snugly-besides-your-workstation-and-right-in-your-life/",
   },
 ];
 
-export const sliderCardData = [
+export const hoverImages = [
   {
-    src: brick,
-    alt: "Brick",
-    cardTitle: "Brick",
-    designerName: "Design Brick",
-    projectName: "desktop mobile area",
-    color: "bg-[#DCDC28]",
+    src: Image1,
+    alt: "Image 1",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
+    rowSpan: "row-span-3",
   },
   {
-    src: woolly,
-    alt: "Woolly",
-    cardTitle: "Woolly Design",
-    designerName: "Design Brick",
-    projectName: "desktop mobile area",
-    color: "bg-[#647acd]",
+    src: Image2,
+    alt: "Image 2",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
+    rowSpan: "row-span-3",
   },
   {
-    src: brick2,
-    alt: "Image One",
-    cardTitle: "Creative One",
-    designerName: "Design Brick",
-    projectName: "desktop mobile area",
-    color: "bg-sky-500",
+    src: Image3,
+    alt: "Image 3",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
+    rowSpan: "row-span-3",
   },
   {
-    src: Olive,
-    alt: "Olive",
-    cardTitle: "Olive Product",
-    designerName: "Design Brick",
-    projectName: "desktop mobile area",
-    color: "bg-indigo-600",
+    src: Image4,
+    alt: "Image 4",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-2 md:col-span-2 sm:col-span-2",
+    rowSpan: "row-span-3",
   },
   {
-    src: coffe2,
-    alt: "Olive",
-    cardTitle: "Coffe Product",
-    designerName: "Design Brick",
-    projectName: "desktop mobile area",
-    color: "bg-[#f1633a]",
+    src: Image5,
+    alt: "Image 2",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
+    rowSpan: "row-span-3",
   },
+  {
+    src: Image6,
+    alt: "Image 3",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
+    rowSpan: "row-span-3",
+  },
+  {
+    src: Image7,
+    alt: "Image 3",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
+    rowSpan: "row-span-3",
+  },
+  {
+    src: Image8,
+    alt: "Image 3",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
+    rowSpan: "row-span-3",
+  },
+  {
+    src: Image9,
+    alt: "Image 2",
+    href: "/",
+    text: (
+      <div className="flex flex-col items-start justify-start py-2 px-5">
+        <span className="text-md font-bold">Woolly</span>
+        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+      </div>
+    ),
+    bg: "bg-black",
+    colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
+    rowSpan: "row-span-3",
+  },
+];
+
+export const socialIcons = [
+  { src: socialIcon1, link: "", alt: "recognitions1" },
+  { src: socialIcon2, link: "", alt: "socialIcon2" },
+  { src: socialIcon3, link: "", alt: "socialIcon3" },
 ];

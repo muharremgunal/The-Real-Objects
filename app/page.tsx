@@ -2,18 +2,14 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import Image1 from "../public/assets/images/ourWork/1.png";
-import Image2 from "../public/assets/images/ourWork/2.png";
-import Image3 from "../public/assets/images/ourWork/3.png";
-import Image4 from "../public/assets/images/ourWork/4.png";
-import Image5 from "../public/assets/images/ourWork/5.png";
-import Image6 from "../public/assets/images/ourWork/6.png";
-import Image7 from "../public/assets/images/ourWork/7.png";
-import Image8 from "../public/assets/images/ourWork/8.png";
-import Image9 from "../public/assets/images/ourWork/9.png";
 import clearLogo from "../public/assets/images/clearLogo.png";
 import motor from "../public/assets/images/motor.png";
-import { sliderCardData, sliderData, sliderImages } from "./data/homeData";
+import {
+  hoverImages,
+  sliderCardData,
+  sliderData,
+  sliderImages,
+} from "./data/homeData";
 import Link from "next/link";
 import ScrollImages from "./components/ScrollImages";
 import { Carousel } from "antd";
@@ -22,143 +18,6 @@ import MouseFollower from "./components/mouseMove";
 
 const Index = () => {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
-  const images = [
-    {
-      src: Image1,
-      alt: "Image 1",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-black",
-      colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
-      rowSpan: "row-span-3",
-    },
-    {
-      src: Image2,
-      alt: "Image 2",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-black",
-      colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
-      rowSpan: "row-span-3",
-    },
-    {
-      src: Image3,
-      alt: "Image 3",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-[#FFCE31]",
-      colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
-      rowSpan: "row-span-3",
-    },
-    {
-      src: Image4,
-      alt: "Image 4",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-green-300",
-      colSpan: "col-span-2 md:col-span-2 sm:col-span-2",
-      rowSpan: "row-span-3",
-    },
-    {
-      src: Image5,
-      alt: "Image 2",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-[#FFCE31]",
-      colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
-      rowSpan: "row-span-3",
-    },
-    {
-      src: Image6,
-      alt: "Image 3",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-[#DCDC28]",
-      colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
-      rowSpan: "row-span-3",
-    },
-    {
-      src: Image7,
-      alt: "Image 3",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-green-300",
-      colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
-      rowSpan: "row-span-3",
-    },
-    {
-      src: Image8,
-      alt: "Image 3",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-[#DCDC28]",
-      colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
-      rowSpan: "row-span-3",
-    },
-    {
-      src: Image9,
-      alt: "Image 2",
-      href: "/",
-      text: (
-        <div className="flex flex-col items-start justify-start py-2 px-5">
-          <span className="text-md font-bold">Woolly</span>
-          <span className="text-sm font-thin">Capsule Coffee Machine</span>
-          <span className="text-sm font-semibold">Soft Mornings</span>
-        </div>
-      ),
-      bg: "bg-[#FFCE31]",
-      colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
-      rowSpan: "row-span-3",
-    },
-  ];
 
   const settings = {
     infinite: true,
@@ -168,17 +27,20 @@ const Index = () => {
     pauseOnHover: true,
     swipeToSlide: true,
     centerMode: true,
-    centerPadding: "40px",
+    centerPadding: "80px",
   };
 
   return (
     <div className="w-screen h-auto">
-      <Image
-        objectFit="contain"
-        src={Image2}
-        alt="Logo"
-        className="w-screen phone:h-[400px] sm:h-[550px] lg:h-[800px] mt-16"
-      />
+      <video
+        className="w-screen xl:h-screen object-cover phone:h-[400px] sm:h-[600px] md:h-[600px] phone:mt-20 mt-16"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/assets/images/video/video.mp4" type="video/mp4" />
+      </video>
       <MouseFollower />
       <div className="z-0 w-full h-full flex flex-col items-center px-3">
         <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap gap-10 relative xl:h-16 lg:h-12 md:h-10 sm:h-8 h-6 -mt-6 backdrop-blur-sm bg-white/20 xl:-mt-16 lg:-mt-12 md:-mt-10 sm:-mt-8">
@@ -272,7 +134,7 @@ const Index = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-4 xl:max-w-[1326px] w-full  sm:px-4 md:px-4 lg:px-4 xl:px-0 gap-4 p-4 transform origin-top-center transition-transform duration-500 ease-in-out">
-            {images.map((image, index) => (
+            {hoverImages.map((image, index) => (
               <div
                 key={index}
                 className={`relative cursor-pointer transition-all duration-500 ease-in-out h-80 phone:h-[180px] sm:h-[250px] lg:h-[320px] ${
@@ -293,7 +155,7 @@ const Index = () => {
                 </Link>
                 {hoveredIndex === index && (
                   <div
-                    className={`absolute bottom-0 flex items-end justify-center ${image.bg} w-full h-20 transition-all duration-800 ease-in-out`}
+                    className={`absolute bottom-0 flex items-end justify-center ${image.bg} w-full h-16 transition-all duration-800 ease-in-out`}
                   >
                     <span className="w-full h-full flex items-start justify-start font-bold text-white">
                       {image.text}
@@ -352,8 +214,9 @@ const Index = () => {
                   alt={item.alt}
                   color={item.color}
                   designerName={item.designerName}
-                  projectName={item.projectName}
-                  cardTitle={item.cardTitle}
+                  projectName={item.projectDescription}
+                  cardIcon={item.cardIcon}
+                  projectLink={item.projectLink}
                 />
               ))}
             </Carousel>

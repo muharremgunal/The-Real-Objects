@@ -24,6 +24,7 @@ const config: Config = {
         textLg: "16px",
         textXl: "18px",
         textXxl: "20px",
+        textXss: "10px",
       },
       transitionDuration: {
         "400": "400ms",
@@ -47,6 +48,9 @@ const config: Config = {
       },
       backgroundImage: {
         "grid-pattern": "url('/1.png')",
+      },
+      boxShadow: {
+        "card-shadow": "rgba(0, 0, 0, 0.16) 0px 4px 6px",
       },
     },
   },
