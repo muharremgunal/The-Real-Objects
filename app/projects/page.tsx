@@ -1,4 +1,4 @@
-import Comingsoon from "../../public/assets/images/comingsoon.png";
+import Comingsoon from "../../public/assets/images/comingSoon.png";
 
 const ProjectsPage = () => {
   return (
