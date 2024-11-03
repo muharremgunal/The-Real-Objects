@@ -72,48 +72,51 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="flex relative items-center justify-end px-1 py-10  max-w-[1326px] h-max-content">
-          <div className="flex flex-col md:flex-row items-start justify-between w-full">
-            <div className="phone:w-7/12 w-full  phone:space-y-4 xl:space-y-12 lg:space-y-8 md:space-y-4">
-              <h1 className="md:text-xl sm:text-sm phone:text-[12px] phone:font-bold w-full md:w-7/12 pr-4 lg:text-3xl xl:text-4xl sm:text-md text-black  md:font-bold lg:font-bold">
-                For us, design is more than just making things look good.
-              </h1>
-              <p className="md:text-md lg:text-xl xl:text-2xl phone:w-2/3 md:w-5/12 lg:w-5/12 sm:text-sm phone:text-[8px] text-gray-700 lg:w-3/4 pr-4">
-                It’s our way of making real, positive change in the world. We
-                want to create products that not only serve a purpose but also
-                bring a sense of happiness and possibility to everyday life.
-              </p>
-              <div className="flex items-center w-2/3">
-                <div className="flex flex-col justify-between phone:w-full">
-                  <ul className="lg:space-y-5 md:space-y-4 phone:space-y-1">
-                    <li className="flex items-center md:text-sm phone:text-[6px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
-                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
-                      Industrial Design
-                    </li>
-                    <li className="flex items-center md:text-sm phone:text-[6px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
-                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
-                      Product Design
-                    </li>
-                    <li className="flex items-center md:text-sm phone:text-[6px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
-                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
-                      UX/UI Design
-                    </li>
-                    <li className="flex items-center md:text-sm phone:text-[6px] lg:text-xl sm:text-sm gap-5 phone:gap-3">
-                      <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
-                      Design for Manufacturing
-                    </li>
-                  </ul>
+        <div className="flex items-center justify-center px-1 py-10  max-w-[1326px] md:px-5">
+          <div
+            className="flex items-center justify-center bg-cover bg-center w-screen h-[80vh] backdrop-blur-sm bg-white/50"
+            style={{ backgroundImage: `url(${motor.src})` }}
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <div className="flex flex-col items-start justify-center font-bold w-full h-full  phone:space-y-4 xl:space-y-12 lg:space-y-8 md:space-y-4">
+                <div className="flex items-start">
+                  <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28] mt-3 mr-4"></span>
+                  <h1 className="w-full text-black  md:font-bold lg:font-bold text-4xl phone:text-xl">
+                    For us, design is more than <br className="phone:hidden" />
+                    just making things look good.
+                  </h1>
+                </div>
+                <p className="text-gray-700 pr-4 text-xl phone:text-sm font-thin ml-7">
+                  It’s our way of making real, positive change in the world.{" "}
+                  <br className="phone:hidden" /> We want to create products
+                  that not only serve a purpose <br className="phone:hidden" />{" "}
+                  but also bring a sense of happiness and possibility to
+                  everyday life.
+                </p>
+                <div className="flex items-center">
+                  <div className="flex flex-col justify-between phone:w-full mt-16">
+                    <ul className="lg:space-y-5 md:space-y-4 phone:space-y-1">
+                      <li className="flex items-center gap-5 phone:gap-3 text-2xl phone:text-xl">
+                        <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
+                        Industrial Design
+                      </li>
+                      <li className="flex items-center gap-5 phone:gap-3 text-2xl phone:text-xl">
+                        <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
+                        Product Design
+                      </li>
+                      <li className="flex items-center gap-5 phone:gap-3 text-2xl phone:text-xl">
+                        <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
+                        UX/UI Design
+                      </li>
+                      <li className="flex items-center gap-5 phone:gap-3 text-2xl phone:text-xl">
+                        <span className="inline-block w-3 h-3 phone:w-2  phone:h-2 rounded-full bg-[#DCDC28]"></span>
+                        Design for Manufacturing
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="flex items-center justify-end absolute w-3/4 phone:w-4/5 h-full py-10">
-            <Image
-              src={motor}
-              alt="Design Image"
-              className="w-full h-full"
-              objectFit="cover"
-            />
           </div>
         </div>
 
