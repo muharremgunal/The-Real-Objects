@@ -8,8 +8,8 @@ import recognitions7 from "../../public/assets/images/recognise/7.png";
 import recognitions8 from "../../public/assets/images/recognise/8.png";
 import recognitions9 from "../../public/assets/images/recognise/9.png";
 
-import Image1 from "../../public/assets/images/ourWork/1.png";
-import Image2 from "../../public/assets/images/ourWork/2.png";
+import Image1 from "../../public/assets/images/ourWork/2.jpeg";
+import Image2 from "../../public/assets/images/ourWork/2.jpeg";
 import Image3 from "../../public/assets/images/ourWork/3.png";
 import Image4 from "../../public/assets/images/ourWork/4.png";
 import Image5 from "../../public/assets/images/ourWork/5.png";
@@ -127,11 +127,12 @@ export const hoverImages = [
     href: "/",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-md font-bold">24</span>
+        <span className="text-sm phone:text-textXs font-thin">e-Bike</span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
     rowSpan: "row-span-3",
   },
@@ -142,10 +143,13 @@ export const hoverImages = [
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
         <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-sm phone:text-textXs font-thin">
+          Capsule Coffee Machine
+        </span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
     rowSpan: "row-span-3",
   },
@@ -155,11 +159,14 @@ export const hoverImages = [
     href: "/",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-md font-bold">Brick</span>
+        <span className="text-sm phone:text-textXs font-thin">
+          Wireless Charger Unit
+        </span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
     rowSpan: "row-span-3",
   },
@@ -169,11 +176,12 @@ export const hoverImages = [
     href: "/",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-md font-bold">24</span>
+        <span className="text-sm phone:text-textXs font-thin">e-Bike </span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-2 md:col-span-2 sm:col-span-2",
     rowSpan: "row-span-3",
   },
@@ -184,10 +192,13 @@ export const hoverImages = [
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
         <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-sm phone:text-textXs font-thin">
+          Capsule Coffee Machine
+        </span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
     rowSpan: "row-span-3",
   },
@@ -197,11 +208,14 @@ export const hoverImages = [
     href: "/",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-md font-bold">T-Olive</span>
+        <span className="text-sm phone:text-textXs font-thin">
+          Branding for oil olive brand
+        </span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
     rowSpan: "row-span-3",
   },
@@ -212,10 +226,13 @@ export const hoverImages = [
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
         <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-sm phone:text-textXs font-thin">
+          Capsule Coffee Machine
+        </span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-2 md:col-span-1 sm:col-span-2",
     rowSpan: "row-span-3",
   },
@@ -225,11 +242,14 @@ export const hoverImages = [
     href: "/",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-md font-bold">T-Olive</span>
+        <span className="text-sm phone:text-textXs font-thin">
+          Branding for oil olive brand
+        </span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-1 md:col-span-1 sm:col-span-1",
     rowSpan: "row-span-3",
   },
@@ -239,11 +259,14 @@ export const hoverImages = [
     href: "/",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
-        <span className="text-sm font-thin">Capsule Coffee Machine</span>
+        <span className="text-md font-bold">Brick</span>
+        <span className="text-sm phone:text-textXs font-thin">
+          Wireless Charger Unit
+        </span>
       </div>
     ),
-    bg: "bg-black",
+    bg: "bg-white/30",
+    bgHover: "bg-black/60",
     colSpan: "col-span-1 md:col-span-2 sm:col-span-1",
     rowSpan: "row-span-3",
   },

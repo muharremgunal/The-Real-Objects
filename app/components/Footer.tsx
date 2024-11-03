@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { FaLinkedin, FaBehance, FaInstagram } from "react-icons/fa";
 import clearLogo from "../../public/assets/images/clearLogo.png";
 import { socialIcons } from "../data/homeData";
 import Link from "next/link";
@@ -8,8 +7,8 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-[#DCDC28] relative mt-20">
-      <div className="max-w-[1326px] mx-auto p-4 w-full h-full flex flex-col justify-between items-center">
-        <div className="text-left text-black phone:text-textXxxs md:text-textXxs xl:text-textXs lg:text-textXs w-full xl:pl-32 lg:pl-5 md:pl-5 phone:pl-4 absolute bottom-4 leading-normal font-normal">
+      <div className="max-w-[1326px] z-10 mx-auto p-4 w-full h-full flex flex-col justify-between items-center">
+        <div className="text-left text-black phone:text-textXxxs md:text-textXxs xl:text-textXs lg:text-textXs w-full xl:w-11/12 xl:pl-16 lg:pl-5 md:pl-5 phone:pl-4 absolute bottom-4 leading-normal font-normal">
           © 2024 The Real Objects <br />
           Milano Business Center s.r.l. <br />
           Via Mauro Macchi, 8 <br /> Via Mauro Macchi, <br /> 8 20124 Milano
@@ -19,10 +18,14 @@ const Footer = () => {
           <h2 className="lg:text-2xl phone:text-md  text-white font-semibold mb-8 phone:mb-4">
             Start Your Project Today.
           </h2>
-          <div className="flex space-x-4">
-            {socialIcons.map((item) => (
-              <Link href="/">
-                <Image className="w-5 h-5" src={item.src} alt="Social Images" />
+          <div className="flex space-x-4 z-50">
+            {socialIcons.map((item, index) => (
+              <Link key={index} href="/">
+                <Image
+                  className="w-6 h-6 cursor-pointer"
+                  src={item.src}
+                  alt="Social Images"
+                />
               </Link>
             ))}
           </div>

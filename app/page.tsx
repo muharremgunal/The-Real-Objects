@@ -33,7 +33,7 @@ const Index = () => {
   return (
     <div className="w-screen h-auto">
       <video
-        className="w-screen xl:h-screen object-cover phone:h-[400px] sm:h-[600px] md:h-[600px] phone:mt-20 mt-16"
+        className="w-screen xl:h-screen object-cover phone:h-[400px] sm:h-[600px] md:h-[600px]"
         autoPlay
         muted
         loop
@@ -150,12 +150,22 @@ const Index = () => {
                     src={image.src}
                     alt={image.alt}
                     layout="fill"
-                    className="transition-all duration-500 ease-in-out"
+                    objectFit="cover"
+                    className="transition-all duration-500 ease-in-out bg-auto"
                   />
                 </Link>
+
+                <div
+                  className={`absolute bottom-0 flex items-end justify-center ${image.bg} w-full h-16 transition-all duration-800 ease-in-out`}
+                >
+                  <span className="w-full h-full flex items-start justify-start font-bold text-black">
+                    {image.text}
+                  </span>
+                </div>
+
                 {hoveredIndex === index && (
                   <div
-                    className={`absolute bottom-0 flex items-end justify-center ${image.bg} w-full h-16 transition-all duration-800 ease-in-out`}
+                    className={`absolute bottom-0 flex items-end justify-center ${image.bgHover} w-full h-16 transition-all duration-800 ease-in-out`}
                   >
                     <span className="w-full h-full flex items-start justify-start font-bold text-white">
                       {image.text}

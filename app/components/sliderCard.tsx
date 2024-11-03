@@ -25,9 +25,9 @@ const SliderCard = ({
         <div
           className={`relative flex flex-col w-full h-[120px] phone:h-[70px] ${color} phone:py-2 py-4 px-6 phone:px-2 text-white rounded-b-3xl`}
         >
-          <div className="w-full text-center h-[40px] phone:h-[20px] text-xl phone:text-textXxxs xxmd:text-textXss leading-normal font-normal px-2">
-            {projectName}
-          </div>
+          <p className="w-full text-center h-[40px] phone:h-[20px] lg:text-textLg xl:text-textLg phone:text-textXxxs xxmd:text-textMd leading-normal px-2">
+            "{projectName}"
+          </p>
           <div className="absolute flex items-center justify-between bottom-0 left-0 right-0 px-4 py-2">
             <div className="text-start phone:text-textXxxs text-md text-black">
               {designerName}
