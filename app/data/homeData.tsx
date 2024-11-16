@@ -126,8 +126,8 @@ export const hoverImages = [
     alt: "Image 1",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">24</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">24</span>
         <span className="text-sm phone:text-textXs font-thin">e-Bike</span>
       </div>
     ),
@@ -141,8 +141,8 @@ export const hoverImages = [
     alt: "Image 2",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">Woolly</span>
         <span className="text-sm phone:text-textXs font-thin">
           Capsule Coffee Machine
         </span>
@@ -158,8 +158,8 @@ export const hoverImages = [
     alt: "Image 3",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Brick</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">Brick</span>
         <span className="text-sm phone:text-textXs font-thin">
           Wireless Charger Unit
         </span>
@@ -175,8 +175,8 @@ export const hoverImages = [
     alt: "Image 4",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">24</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">24</span>
         <span className="text-sm phone:text-textXs font-thin">e-Bike </span>
       </div>
     ),
@@ -190,8 +190,8 @@ export const hoverImages = [
     alt: "Image 2",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">Woolly</span>
         <span className="text-sm phone:text-textXs font-thin">
           Capsule Coffee Machine
         </span>
@@ -207,10 +207,10 @@ export const hoverImages = [
     alt: "Image 3",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">T-Olive</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">T-Olive</span>
         <span className="text-sm phone:text-textXs font-thin">
-          Branding for oil olive brand
+          Branding design
         </span>
       </div>
     ),
@@ -224,8 +224,8 @@ export const hoverImages = [
     alt: "Image 3",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Woolly</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">Woolly</span>
         <span className="text-sm phone:text-textXs font-thin">
           Capsule Coffee Machine
         </span>
@@ -241,10 +241,10 @@ export const hoverImages = [
     alt: "Image 3",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">T-Olive</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">T-Olive</span>
         <span className="text-sm phone:text-textXs font-thin">
-          Branding for oil olive brand
+          Branding design
         </span>
       </div>
     ),
@@ -258,8 +258,8 @@ export const hoverImages = [
     alt: "Image 2",
     href: "/",
     text: (
-      <div className="flex flex-col items-start justify-start py-2 px-5">
-        <span className="text-md font-bold">Brick</span>
+      <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
+        <span className="text-md font-semibold">Brick</span>
         <span className="text-sm phone:text-textXs font-thin">
           Wireless Charger Unit
         </span>

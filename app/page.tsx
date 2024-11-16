@@ -72,9 +72,9 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center px-1 py-10  max-w-[1326px] md:px-5">
+        <div className="flex items-center justify-center py-10  max-w-[1326px] md:px-5 w-full">
           <div
-            className="flex items-center justify-center bg-cover bg-center w-screen h-[80vh] backdrop-blur-sm bg-white/50"
+            className="flex items-center justify-center bg-cover bg-center w-screen h-[80vh] backdrop-blur-sm bg-white/50 px-4"
             style={{ backgroundImage: `url(${motor.src})` }}
           >
             <div className="flex flex-col items-center justify-center w-full h-full">
@@ -131,7 +131,7 @@ const Index = () => {
               </p>
             </div>
             <div className="absolute bottom-0 right-0 ">
-              <div className="rounded-full bottom-0 right-0 shadow-md flex items-center justify-center">
+              <div className="bottom-0 right-0 flex items-center justify-center">
                 <Image src={clearLogo} alt="logo" className="w-16 h-16" />
               </div>
             </div>
@@ -161,7 +161,7 @@ const Index = () => {
                 <div
                   className={`absolute bottom-0 flex items-end justify-center ${image.bg} w-full h-16 transition-all duration-800 ease-in-out`}
                 >
-                  <span className="w-full h-full flex items-start justify-start font-bold text-black">
+                  <span className="w-full h-full flex items-center justify-start font-bold text-black">
                     {image.text}
                   </span>
                 </div>
@@ -184,7 +184,7 @@ const Index = () => {
           <div className="lg:text-4xl phone:text-xl font-medium">
             Recognitions
           </div>
-          <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative mt-4 xl:h-24 lg:h-20 md:h-16 sm:h-10 phone:h-8 backdrop-blur-sm bg-white/20">
+          <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative mt-4 xl:h-20 lg:h-26 md:h-12 sm:h-8 phone:h-8 backdrop-blur-sm bg-white/20">
             <div className="flex animate-marquee  items-center">
               {sliderImages.map((item, index) => (
                 <div

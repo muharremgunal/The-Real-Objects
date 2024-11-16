@@ -19,13 +19,14 @@ const SliderCard = ({
             src={src}
             alt={alt}
             layout="fill"
-            className="object-fill rounded-t-lg"
+            objectFit="cover"
+            className="rounded-t-lg"
           />
         </div>
         <div
           className={`relative flex flex-col w-full h-[120px] phone:h-[70px] ${color} phone:py-2 py-4 px-6 phone:px-2 text-white rounded-b-3xl`}
         >
-          <p className="w-full text-center h-[40px] phone:h-[20px] lg:text-textLg xl:text-textLg phone:text-textXxxs xxmd:text-textMd leading-normal px-2">
+          <p className="w-full text-center h-[40px] phone:h-[20px] lg:text-textLg xl:text-textLg phone:text-textXxxs pro:text-textXss leading-normal px-2">
             "{projectName}"
           </p>
           <div className="absolute flex items-center justify-between bottom-0 left-0 right-0 px-4 py-2">

@@ -1,13 +1,5 @@
 export const navbarText = [
   {
-    id: 1,
-    name: "Home",
-    hover: "hover:bg-[#DCDC28]",
-    color: "hover:text-white",
-    border: "hover:border-[#DCDC28]",
-    href: "/",
-  },
-  {
     id: 2,
     name: "Projects",
     hover: "hover:bg-[#EB6854]",

@@ -14,13 +14,15 @@ const Header = () => {
     <nav className="backdrop-blur-sm bg-white/30 fixed  sm:h-[70px] xl:h-30 flex top-0 items-center justify-center w-screen z-50">
       <div className="flex items-center h-20 xl:w-11/12 w-full sm:px-4 md:px-4 lg:px-4 xl:px-12 px-4 justify-between">
         <div className="flex items-center">
-          <Image
-            width={100}
-            height={100}
-            src={navLogo}
-            alt="Logo"
-            className="mr-2"
-          />
+          <Link href="/">
+            <Image
+              width={100}
+              height={100}
+              src={navLogo}
+              alt="Logo"
+              className="mr-2"
+            />
+          </Link>
         </div>
         <div className="md:hidden flex items-center">
           <button

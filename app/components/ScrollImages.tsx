@@ -95,7 +95,7 @@ const ScrollImages = () => {
 
   return (
     <div className="relative h-[300vh] w-screen">
-      <div className="sticky top-16 w-full h-screen">
+      <div className="sticky top-0 w-full h-screen">
         {scrollImages.map((image, index) => (
           <Image
             key={index}
@@ -108,11 +108,11 @@ const ScrollImages = () => {
           />
         ))}
       </div>
-      <div className="h-[300vh] overflow-hidden absolute top-24 w-full z-40">
+      <div className="h-[300vh] overflow-hidden absolute top-36 w-full z-40">
         <div className="lg:text-6xl phone:text-4xl lg:text-6xl md:text-6xl xxmd:text-6xl w-full h-[300px] font-bold flex items-center mt-[100px] justify-center text-white left-40">
           Our Expertise
         </div>
-        <div className="phone:h-[60%] md:h-[70%] lg:h-[66%] xl:h-[66%] 2xl:h-[66%] flex flex-col justify-around">
+        <div className="phone:h-[60%] md:h-[70%] lg:h-[66%] xl:h-[65%] 2xl:h-[65%] pro:h-[75%] flex flex-col justify-around">
           <Scrollama offset={0.6} onStepEnter={onStepEnter}>
             {scrollImages.map((image, index) => (
               <Step data={index} key={index}>
@@ -153,4 +153,3 @@ const ScrollImages = () => {
 };
 
 export default ScrollImages;
-//xxxxsm:h-[125px] xxxsm:h-[170px] xxxxxsm:h-[140px] xxsm:h-[180px] xsm:h-[190px] xxxmd:h-[220px] xxmd:h-[260px] xmd:h-[320px] web:h-[280px]
