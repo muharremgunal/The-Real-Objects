@@ -8,8 +8,8 @@ import recognitions7 from "../../public/assets/images/recognise/7.png";
 import recognitions8 from "../../public/assets/images/recognise/8.png";
 import recognitions9 from "../../public/assets/images/recognise/9.png";
 
-import Image1 from "../../public/assets/images/ourWork/2.jpeg";
-import Image2 from "../../public/assets/images/ourWork/2.jpeg";
+import Image1 from "../../public/assets/images/ourWork/1.png";
+import Image2 from "../../public/assets/images/ourWork/2.png";
 import Image3 from "../../public/assets/images/ourWork/3.png";
 import Image4 from "../../public/assets/images/ourWork/4.png";
 import Image5 from "../../public/assets/images/ourWork/5.png";
