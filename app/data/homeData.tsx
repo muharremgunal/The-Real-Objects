@@ -225,9 +225,9 @@ export const hoverImages = [
     href: "/",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
-        <span className="text-md font-semibold">Woolly</span>
+        <span className="text-md font-semibold">Bob</span>
         <span className="text-sm phone:text-textXs font-thin">
-          Capsule Coffee Machine
+          Working Space
         </span>
       </div>
     ),
@@ -242,9 +242,9 @@ export const hoverImages = [
     href: "/",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
-        <span className="text-md font-semibold">T-Olive</span>
+        <span className="text-md font-semibold">Balance</span>
         <span className="text-sm phone:text-textXs font-thin">
-          Branding design
+          Faucet Design
         </span>
       </div>
     ),
