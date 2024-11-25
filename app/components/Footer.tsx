@@ -20,7 +20,7 @@ const Footer = () => {
           </h2>
           <div className="flex space-x-4 z-50">
             {socialIcons.map((item, index) => (
-              <Link key={index} href={item.link}>
+              <Link key={index} href={item.link} target="_blank">
                 <Image
                   className="w-6 h-6 cursor-pointer"
                   src={item.src}
