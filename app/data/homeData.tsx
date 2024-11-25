@@ -273,7 +273,19 @@ export const hoverImages = [
 ];
 
 export const socialIcons = [
-  { src: socialIcon1, link: "", alt: "recognitions1" },
-  { src: socialIcon2, link: "", alt: "socialIcon2" },
-  { src: socialIcon3, link: "", alt: "socialIcon3" },
+  {
+    src: socialIcon1,
+    link: "https://www.linkedin.com/company/therealobjects/?viewAsMember=true",
+    alt: "recognitions1",
+  },
+  {
+    src: socialIcon2,
+    link: "https://www.behance.net/therealobjects",
+    alt: "socialIcon2",
+  },
+  {
+    src: socialIcon3,
+    link: "https://www.instagram.com/therealobjects",
+    alt: "socialIcon3",
+  },
 ];

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="text-left text-black phone:text-textXxxs md:text-textXxs xl:text-textXs lg:text-textXs w-full xl:w-11/12 xl:pl-16 lg:pl-5 md:pl-5 phone:pl-4 absolute bottom-4 leading-normal font-normal">
           © 2024 The Real Objects <br />
           Milano Business Center s.r.l. <br />
-          Via Mauro Macchi, 8 <br /> Via Mauro Macchi, <br /> 8 20124 Milano
+          Via Mauro Macchi, <br /> 8 20124 Milano
         </div>
 
         <div className="flex flex-col items-center justify-center text-center">
@@ -20,7 +20,7 @@ const Footer = () => {
           </h2>
           <div className="flex space-x-4 z-50">
             {socialIcons.map((item, index) => (
-              <Link key={index} href="/">
+              <Link key={index} href={item.link}>
                 <Image
                   className="w-6 h-6 cursor-pointer"
                   src={item.src}

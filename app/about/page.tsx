@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Comingsoon from "../../public/assets/images/comingSoon.png";
+import funnyLogo from "../../public/assets/images/funnyLogo.png";
 
 const AboutPage = () => {
   return (
@@ -15,7 +17,11 @@ const AboutPage = () => {
         <p className="text-right pr-3 text-sm md:text-lg bg-black py-2 mb-1">
           The Real Object's Team
         </p>
-        <div className="bg-black w-full h-12 mb-1"></div>
+        <div className="relative bg-black w-full h-12 mb-1">
+          <div className="absolute bottom-0 right-0">
+            <Image className="w-12 h-12" src={funnyLogo} alt="Footer Image" />
+          </div>
+        </div>
       </div>
     </div>
   );
