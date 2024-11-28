@@ -49,7 +49,7 @@ const Header = () => {
                 className="mr-1"
               />
             ) : (
-              <LuGrip className="w-8 h-8" />
+              <LuGrip className="w-8 h-8" color="black" />
             )}
           </button>
         </div>
