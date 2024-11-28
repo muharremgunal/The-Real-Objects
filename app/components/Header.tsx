@@ -3,12 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import navLogo from "../../public/assets/images/navLogo.png";
-import { useState } from "react";
+import headerIcon from "../../public/assets/images/headerIcon.png";
+import { useEffect, useState } from "react";
 import { navbarText } from "../data/headerData";
 import { LuGrip } from "react-icons/lu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<Boolean>(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.position = "fixed";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.position = "";
+      document.body.style.overflow = "";
+    }
+  }, [isMenuOpen]);
 
   return (
     <nav className="backdrop-blur-sm bg-white/30 fixed  sm:h-[70px] xl:h-30 flex top-0 items-center justify-center w-screen z-50">
@@ -29,7 +40,17 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-800 hover:text-gray-600 focus:outline-none"
           >
-            <LuGrip className="w-8 h-8" />
+            {isMenuOpen ? (
+              <Image
+                src={headerIcon}
+                alt="headerIcon"
+                width={22}
+                height={22}
+                className="mr-1"
+              />
+            ) : (
+              <LuGrip className="w-8 h-8" />
+            )}
           </button>
         </div>
         <div

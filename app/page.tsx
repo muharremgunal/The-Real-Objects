@@ -15,6 +15,7 @@ import ScrollImages from "./components/ScrollImages";
 import { Carousel } from "antd";
 import SliderCard from "./components/sliderCard";
 import MouseFollower from "./components/mouseMove";
+import Marquee from "react-fast-marquee";
 
 const Index = () => {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
@@ -44,32 +45,16 @@ const Index = () => {
       <MouseFollower />
       <div className="z-0 w-full h-full flex flex-col items-center px-3">
         <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap gap-10 relative xl:h-16 lg:h-12 md:h-10 sm:h-8 h-6 -mt-6 backdrop-blur-sm bg-white/20 xl:-mt-16 lg:-mt-12 md:-mt-10 sm:-mt-8">
-          <div className="flex animate-marquee  items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10">
+          <Marquee gradient={false} speed={30}>
             {sliderData.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10"
-              >
-                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2 w-4 h-4 mr-2"></span>
+              <div key={index} className="flex items-center">
+                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2 sm:w-3 sm:h-3 w-4 h-4 mr-2"></span>
                 <span className="px-20 phone:px-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2 text-white">
                   {item}
                 </span>
               </div>
             ))}
-          </div>
-          <div className="flex animate-marquee  items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10">
-            {sliderData.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center xl:gap-20 lg:gap-16 md:gap-12 sm:gap-10"
-              >
-                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2 w-4 h-4 mr-2"></span>
-                <span className="px-20 phone:px-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2 text-white">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
+          </Marquee>
         </div>
 
         <div className="flex items-center justify-center py-10  max-w-[1326px] md:px-5 w-full">
@@ -184,30 +169,17 @@ const Index = () => {
           <div className="lg:text-4xl phone:text-xl font-medium">
             Recognitions
           </div>
-          <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap relative mt-4 xl:h-20 lg:h-26 md:h-12 sm:h-8 phone:h-8 backdrop-blur-sm bg-white/20">
-            <div className="flex animate-marquee  items-center">
-              {sliderImages.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex w-max h-full items-center gap-10 mr-10 xl:gap-20 xl:mr-20"
-                >
-                  <span className="bg-[#DCDC28] rounded-full w-4 h-4 phone:w-2 phone:h-2 z-40" />
-                  <Image className="w-max h-full" src={item.src} alt="images" />
-                </div>
-              ))}
-            </div>
-            <div className="flex animate-marquee  items-center">
-              {sliderImages.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex w-max h-full items-center gap-10 mr-10 xl:gap-20 xl:mr-20"
-                >
-                  <span className="bg-[#DCDC28] rounded-full w-4 h-4 phone:w-2 phone:h-2 z-40" />
-                  <Image className="w-max h-full" src={item.src} alt="images" />
-                </div>
-              ))}
-            </div>
-          </div>
+          <Marquee gradient={false} speed={30}>
+            {sliderImages.map((item, index) => (
+              <div
+                key={index}
+                className="flex w-max h-full items-center gap-10 mr-10 mt-4 xl:gap-20 xl:mr-20 xl:h-20 lg:h-26 md:h-16 sm:h-8 phone:h-10"
+              >
+                <span className="bg-[#DCDC28] rounded-full w-4 h-4 sm:w-3 sm:h-3 phone:w-2 phone:h-2 xl:w-5 xl:h-5 z-40" />
+                <Image className="w-max h-full" src={item.src} alt="images" />
+              </div>
+            ))}
+          </Marquee>
         </div>
 
         <ScrollImages />

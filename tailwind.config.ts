@@ -44,7 +44,7 @@ const config: Config = {
         xmd: "1024px",
         phone: { max: "767px" },
         web: { min: "1025px" },
-        pro: { max: "1024px" },
+        pro: { min: "820px", max: "1024px" },
         air: "820px",
       },
       backgroundImage: {
