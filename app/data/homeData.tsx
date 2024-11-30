@@ -124,7 +124,7 @@ export const hoverImages = [
   {
     src: Image1,
     alt: "Image 1",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">24</span>
@@ -139,7 +139,7 @@ export const hoverImages = [
   {
     src: Image2,
     alt: "Image 2",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Woolly</span>
@@ -156,7 +156,7 @@ export const hoverImages = [
   {
     src: Image3,
     alt: "Image 3",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Brick</span>
@@ -173,7 +173,7 @@ export const hoverImages = [
   {
     src: Image4,
     alt: "Image 4",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">24</span>
@@ -188,7 +188,7 @@ export const hoverImages = [
   {
     src: Image5,
     alt: "Image 2",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Woolly</span>
@@ -205,7 +205,7 @@ export const hoverImages = [
   {
     src: Image6,
     alt: "Image 3",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">T-Olive</span>
@@ -222,7 +222,7 @@ export const hoverImages = [
   {
     src: Image7,
     alt: "Image 3",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Bob</span>
@@ -239,7 +239,7 @@ export const hoverImages = [
   {
     src: Image8,
     alt: "Image 3",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Balance</span>
@@ -256,7 +256,7 @@ export const hoverImages = [
   {
     src: Image9,
     alt: "Image 2",
-    href: "/",
+    href: "/projects",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Brick</span>
