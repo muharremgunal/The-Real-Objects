@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 import Comingsoon from "../../public/assets/images/comingSoon.png";
 import funnyLogo from "../../public/assets/images/funnyLogo.png";
 
-const OurNotebookPage = () => {
+export default function OurNotebookPage() {
   return (
     <div
       className="min-h-screen w-screen flex items-center justify-center bg-cover bg-center -mb-32"
@@ -26,6 +27,4 @@ const OurNotebookPage = () => {
       </div>
     </div>
   );
-};
-
-export default OurNotebookPage;
+}

@@ -1,13 +1,15 @@
+"use client";
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
-
+import { usePathname } from "next/navigation";
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const pathname = usePathname();
   return (
     <html lang="en">
       <head>
@@ -27,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <body>
         <Header />
         <main>{children}</main>
-        <Footer />
+        {pathname !== "/contact" && <Footer />}
       </body>
     </html>
   );

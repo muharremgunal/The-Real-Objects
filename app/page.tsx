@@ -39,6 +39,7 @@ const Index = () => {
         muted
         loop
         playsInline
+        preload="none"
       >
         <source src="/assets/images/video/video.mp4" type="video/mp4" />
       </video>
@@ -57,7 +58,7 @@ const Index = () => {
           </Marquee>
         </div>
 
-        <div className="flex items-center justify-center py-10  max-w-[1326px] md:px-5 w-full">
+        <div className="flex items-center justify-center py-10  max-w-[1326px] w-full">
           <div
             className="flex items-center justify-center bg-cover bg-center w-screen h-[80vh] backdrop-blur-sm bg-white/50 px-4"
             style={{ backgroundImage: `url(${motor.src})` }}
@@ -121,7 +122,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-4 xl:max-w-[1326px] w-full  sm:px-4 md:px-4 lg:px-4 xl:px-0 gap-4 p-4 transform origin-top-center transition-transform duration-500 ease-in-out">
+          <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-4 xl:max-w-[1326px] w-full sm:px-4 md:px-4 lg:px-4 xl:px-0 gap-4 p-4">
             {hoverImages.map((image, index) => (
               <div
                 key={index}
@@ -129,11 +130,11 @@ const Index = () => {
                   hoveredIndex !== null && hoveredIndex !== index
                     ? `blur-sm`
                     : ""
-                } ${image.colSpan} ${image.rowSpan} `}
+                } ${image.colSpan} ${image.rowSpan}`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <Link href={image.href} passHref className="xsm:h-[100px]">
+                <Link href={`/projects/${index + 1}`} className="xsm:h-[100px]">
                   <Image
                     src={image.src}
                     alt={image.alt}

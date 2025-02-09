@@ -29,6 +29,17 @@ import socialIcon1 from "../../public/assets/images/socialIcons/1.png";
 import socialIcon2 from "../../public/assets/images/socialIcons/2.png";
 import socialIcon3 from "../../public/assets/images/socialIcons/3.png";
 
+import theStudio1 from "../../public/assets/images/theStudio/1.png";
+import theStudio2 from "../../public/assets/images/theStudio/2.png";
+import theStudio3 from "../../public/assets/images/theStudio/3.png";
+import theStudio4 from "../../public/assets/images/theStudio/4.png";
+import theStudio5 from "../../public/assets/images/theStudio/5.png";
+import theStudio6 from "../../public/assets/images/theStudio/6.png";
+import theStudio7 from "../../public/assets/images/theStudio/7.png";
+import theStudio8 from "../../public/assets/images/theStudio/8.png";
+import theStudio9 from "../../public/assets/images/theStudio/9.png";
+import theStudio10 from "../../public/assets/images/theStudio/10.png";
+
 export const sliderImages = [
   { src: recognitions1, alt: "recognitions1" },
   { src: recognitions2, alt: "recognitions2" },
@@ -39,6 +50,9 @@ export const sliderImages = [
   { src: recognitions7, alt: "recognitions8" },
   { src: recognitions8, alt: "recognitions9" },
   { src: recognitions9, alt: "recognitions9" },
+  { src: recognitions4, alt: "recognitions4" },
+  { src: recognitions5, alt: "recognitions5" },
+  { src: recognitions6, alt: "recognitions7" },
 ];
 
 export const sliderData = [
@@ -124,7 +138,7 @@ export const hoverImages = [
   {
     src: Image1,
     alt: "Image 1",
-    href: "/projects",
+    href: "/projects/1",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">24</span>
@@ -139,7 +153,7 @@ export const hoverImages = [
   {
     src: Image2,
     alt: "Image 2",
-    href: "/projects",
+    href: "/projects/2",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Woolly</span>
@@ -156,7 +170,7 @@ export const hoverImages = [
   {
     src: Image3,
     alt: "Image 3",
-    href: "/projects",
+    href: "/projects/3",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Brick</span>
@@ -173,7 +187,7 @@ export const hoverImages = [
   {
     src: Image4,
     alt: "Image 4",
-    href: "/projects",
+    href: "/projects/4",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">24</span>
@@ -188,7 +202,7 @@ export const hoverImages = [
   {
     src: Image5,
     alt: "Image 2",
-    href: "/projects",
+    href: "/projects/5",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Woolly</span>
@@ -205,7 +219,7 @@ export const hoverImages = [
   {
     src: Image6,
     alt: "Image 3",
-    href: "/projects",
+    href: "/projects/6",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">T-Olive</span>
@@ -222,7 +236,7 @@ export const hoverImages = [
   {
     src: Image7,
     alt: "Image 3",
-    href: "/projects",
+    href: "/projects/7",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Bob</span>
@@ -239,7 +253,7 @@ export const hoverImages = [
   {
     src: Image8,
     alt: "Image 3",
-    href: "/projects",
+    href: "/projects/8",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Balance</span>
@@ -256,7 +270,7 @@ export const hoverImages = [
   {
     src: Image9,
     alt: "Image 2",
-    href: "/projects",
+    href: "/projects/9",
     text: (
       <div className="flex flex-col items-start justify-start py-2 px-5 phone:p-1">
         <span className="text-md font-semibold">Brick</span>
@@ -288,4 +302,40 @@ export const socialIcons = [
     link: "https://www.instagram.com/therealobjects",
     alt: "socialIcon3",
   },
+];
+
+export const aboutSliderData = [
+  { src: theStudio1, alt: "theStudio1" },
+  { src: theStudio2, alt: "theStudio2" },
+  { src: theStudio3, alt: "theStudio3" },
+  { src: theStudio4, alt: "theStudio4" },
+  { src: theStudio5, alt: "theStudio5" },
+  { src: theStudio1, alt: "theStudio1" },
+  { src: theStudio2, alt: "theStudio2" },
+  { src: theStudio3, alt: "theStudio3" },
+  { src: theStudio4, alt: "theStudio4" },
+  { src: theStudio5, alt: "theStudio5" },
+  { src: theStudio2, alt: "theStudio2" },
+  { src: theStudio6, alt: "theStudio7" },
+  { src: theStudio7, alt: "theStudio8" },
+  { src: theStudio8, alt: "theStudio9" },
+  { src: theStudio3, alt: "theStudio3" },
+  { src: theStudio5, alt: "theStudio5" },
+  { src: theStudio3, alt: "theStudio3" },
+];
+export const aboutSliderDat2 = [
+  { src: theStudio6, alt: "theStudio7" },
+  { src: theStudio7, alt: "theStudio8" },
+  { src: theStudio8, alt: "theStudio9" },
+  { src: theStudio9, alt: "theStudio9" },
+  { src: theStudio10, alt: "theStudio10" },
+  { src: theStudio6, alt: "theStudio7" },
+  { src: theStudio7, alt: "theStudio8" },
+  { src: theStudio8, alt: "theStudio9" },
+  { src: theStudio9, alt: "theStudio9" },
+  { src: theStudio10, alt: "theStudio10" },
+  { src: theStudio7, alt: "theStudio8" },
+  { src: theStudio8, alt: "theStudio9" },
+  { src: theStudio3, alt: "theStudio3" },
+  { src: theStudio4, alt: "theStudio4" },
 ];
