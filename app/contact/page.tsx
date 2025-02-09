@@ -1,15 +1,13 @@
 import Image from "next/image";
-import Comingsoon from "../../public/assets/images/comingSoon.png";
-import funnyLogo from "../../public/assets/images/funnyLogo.png";
 import Link from "next/link";
 import { socialIcons } from "../data/homeData";
 
 const ContactPage = () => {
   return (
     <div className="min-h-screen w-full">
-      <div className="w-full py-16 md:py-24 h-[40vh] flex flex-col justify-center items-center">
+      <div className="w-full py-16 md:py-24 h-[40vh] phone:h-[30vh] flex flex-col justify-center items-center">
         <section className="w-full flex flex-col text-left px-6 xl:px-32 phone:mt-10">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl mb-4 flex items-center">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl mb-4 phone:mb-2 phone:text-4xl flex items-center">
             Let's Talk
             <span className="inline-block transform -rotate-45 ml-2">↓</span>
           </h1>
@@ -19,9 +17,9 @@ const ContactPage = () => {
         </section>
       </div>
       <div className="w-full absolute bottom-0">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end px-6 xl:px-32 mb-4 gap-6 md:gap-0">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end px-6 xl:px-32 mb-4 gap-6 phone:gap-2 md:gap-0">
           <div className="flex items-center gap-4">
-            <p className="text-2xl md:text-3xl lg:text-4xl font-thin">
+            <p className="text-2xl md:text-3xl lg:text-4xl phone:text-xl font-thin">
               Follow us
             </p>
             <div className="flex space-x-4 z-50">
@@ -36,7 +34,7 @@ const ContactPage = () => {
               ))}
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-8 text-sm md:text-base">
+          <div className="flex flex-col md:flex-row items-start md:items-end gap-4 phone:gap-2 md:gap-8 text-sm md:text-base">
             <div className="flex flex-col text-left">
               <p>Milano Business Center s.r.l.</p>
               <p>Via Mauro Macchi, 8, 20124 Milano</p>
