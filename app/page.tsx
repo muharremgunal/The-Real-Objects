@@ -5,6 +5,8 @@ import React from "react";
 import Link from "next/link";
 import clearLogo from "../public/assets/images/clearLogo.png";
 import navLogo from "../public/assets/images/navLogo.png";
+import ScrollImages from "./components/ScrollImages";
+import Marquee from "react-fast-marquee";
 import {
   hoverImages,
   sliderData,
@@ -14,32 +16,61 @@ import {
 const Index = () => {
   return (
     <div className="min-h-screen bg-white pt-16">
-      {/* Minimal Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center space-y-8 px-4">
-          <Image 
-            src={navLogo} 
-            alt="The Real Objects" 
-            width={200} 
-            height={80} 
-            className="mx-auto mb-8" 
-            priority
-          />
-          <h1 className="text-4xl md:text-6xl font-light text-gray-900">
-            Design Studio
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            We create products that truly matter, adapting to a world in constant change.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-            {sliderData.slice(0, 5).map((item, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-100 rounded-full">
-                {item}
-              </span>
-            ))}
+      {/* Hero Section with Video */}
+      <section className="relative h-screen">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+        >
+          <source src="/assets/images/video/video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="text-center space-y-8 px-4 text-white">
+            <Image 
+              src={navLogo} 
+              alt="The Real Objects" 
+              width={200} 
+              height={80} 
+              className="mx-auto mb-8 brightness-0 invert" 
+              priority
+            />
+            <h1 className="text-4xl md:text-6xl font-light">
+              Design Studio
+            </h1>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto">
+              We create products that truly matter, adapting to a world in constant change.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              {sliderData.slice(0, 5).map((item, index) => (
+                <span key={index} className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Marquee Text Slider */}
+      <div className="relative">
+        <div className="bg-white/20 backdrop-blur-sm border-y border-gray-200">
+          <Marquee gradient={false} speed={30}>
+            {sliderData.map((item, index) => (
+              <div key={index} className="flex items-center py-4">
+                <span className="bg-gray-900 rounded-full w-2 h-2 mr-4"></span>
+                <span className="px-8 text-gray-700 font-medium">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </div>
 
       {/* Our Work Section */}
       <section className="py-20 px-4">
@@ -89,33 +120,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Our Expertise Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              Our Expertise
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              From concept to production, we offer comprehensive design services.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sliderData.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow"
-              >
-                <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-light">
-                  {String(index + 1).padStart(2, '0')}
-                </div>
-                <h3 className="text-lg font-medium text-gray-900">{item}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Our Expertise Section with ScrollImages */}
+      <ScrollImages />
 
       {/* Recognition Section */}
       <section className="py-20">
