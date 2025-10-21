@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </head>
       <body>
         <Header />
-        <main>{children}</main>
+        <main className={pathname === "/" ? "" : "pt-16"}>{children}</main>
         {pathname !== "/contact" && <Footer />}
       </body>
     </html>

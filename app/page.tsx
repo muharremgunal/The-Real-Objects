@@ -1,126 +1,175 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
+import Link from "next/link";
 import clearLogo from "../public/assets/images/clearLogo.png";
+import navLogo from "../public/assets/images/navLogo.png";
 import {
   hoverImages,
   sliderData,
   sliderImages,
 } from "./data/homeData";
-import Link from "next/link";
-import ScrollImages from "./components/ScrollImages";
-import MouseFollower from "./components/mouseMove";
-import Marquee from "react-fast-marquee";
 
 const Index = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<any>(null);
-
   return (
-    <div className="w-screen h-auto">
-      <video
-        className="w-screen xl:h-screen object-cover phone:h-[400px] sm:h-[600px] md:h-[600px]"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none"
-      >
-        <source src="/assets/images/video/video.mp4" type="video/mp4" />
-      </video>
-      <MouseFollower />
-      <div className="z-0 w-full h-full flex flex-col items-center px-3">
-        <div className="z-40 w-screen flex overflow-hidden whitespace-nowrap gap-10 relative xl:h-16 lg:h-12 md:h-10 sm:h-8 h-6 -mt-6 backdrop-blur-sm bg-white/20 xl:-mt-16 lg:-mt-12 md:-mt-10 sm:-mt-8">
-          <Marquee gradient={false} speed={30}>
-            {sliderData.map((item, index) => (
-              <div key={index} className="flex items-center">
-                <span className="bg-[#DCDC28] rounded-full phone:w-2 phone:h-2 sm:w-3 sm:h-3 w-4 h-4 mr-2"></span>
-                <span className="px-20 phone:px-10 sm:text-textXxs md:text-textMd lg:text-textMd xl:text-textXl text-textXxs mr-2 text-white">
-                  {item}
-                </span>
-              </div>
+    <div className="min-h-screen bg-white pt-16">
+      {/* Minimal Hero Section */}
+      <section className="relative h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center space-y-8 px-4">
+          <Image 
+            src={navLogo} 
+            alt="The Real Objects" 
+            width={200} 
+            height={80} 
+            className="mx-auto mb-8" 
+            priority
+          />
+          <h1 className="text-4xl md:text-6xl font-light text-gray-900">
+            Design Studio
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+            We create products that truly matter, adapting to a world in constant change.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+            {sliderData.slice(0, 5).map((item, index) => (
+              <span key={index} className="px-3 py-1 bg-gray-100 rounded-full">
+                {item}
+              </span>
             ))}
-          </Marquee>
-        </div>
-
-        <div className="w-screen h-full flex flex-col items-center justify-center">
-          <div className="w-full bg-[#DCDC28] relative py-10 flex flex-col items-center justify-center max-w-[1326px]">
-            <div className="text-center lg:px-40">
-              <h2 className="phone:text-2xl text-4xl font-bold">Our Work</h2>
-              <p className="mt-4 phone:text-textXs lg:text-lg phone:text-sm px-14">
-                Every product we design has its own unique impact on its users.
-                We strive to evoke emotions and create experiences that resonate
-                on a personal level.
-              </p>
-            </div>
-            <div className="absolute bottom-0 right-0 ">
-              <div className="bottom-0 right-0 flex items-center justify-center">
-                <Image src={clearLogo} alt="logo" className="w-16 h-16" />
-              </div>
-            </div>
           </div>
-          <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:max-w-[1326px] w-full sm:px-4 md:px-4 lg:px-4 xl:px-0 gap-6 p-6">
-            {hoverImages.map((image, index) => (
-              <div
+        </div>
+      </section>
+
+      {/* Our Work Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Our Work
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Every product we design has its own unique impact on its users. 
+              We strive to evoke emotions and create experiences that resonate on a personal level.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {hoverImages.slice(0, 6).map((image, index) => (
+              <Link
                 key={index}
-                className="relative cursor-pointer transition-all duration-500 ease-in-out h-80 phone:h-[200px] sm:h-[250px] lg:h-[320px] hover:scale-105"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                href={`/projects/${index + 1}`}
+                className="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                <Link href={`/projects/${index + 1}`} className="relative block w-full h-full">
+                <div className="relative h-64 overflow-hidden">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: "cover" }}
-                    className="transition-all duration-500 ease-in-out rounded-lg"
-                    priority={index < 6}
+                    className="group-hover:scale-105 transition-transform duration-300"
                   />
-                </Link>
-
-                <div
-                  className={`absolute bottom-0 flex items-end justify-center ${image.bg} w-full h-16 transition-all duration-800 ease-in-out rounded-b-lg`}
-                >
-                  <span className="w-full h-full flex items-center justify-start font-bold text-black px-4">
-                    {image.text}
-                  </span>
                 </div>
-
-                {hoveredIndex === index && (
-                  <div
-                    className={`absolute bottom-0 flex items-end justify-center ${image.bgHover} w-full h-16 transition-all duration-800 ease-in-out rounded-b-lg`}
-                  >
-                    <span className="w-full h-full flex items-start justify-start font-bold text-white px-4">
-                      {image.text}
-                    </span>
-                  </div>
-                )}
-              </div>
+                <div className="p-6">
+                  {image.text}
+                </div>
+              </Link>
             ))}
           </div>
-        </div>
-
-        <div className="flex flex-col items-center justify-center w-screen h-max-content my-10 gap-4">
-          <div className="lg:text-4xl phone:text-xl font-medium">
-            Recognitions
+          
+          <div className="text-center mt-12">
+            <Link 
+              href="/projects" 
+              className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
+            >
+              View All Projects
+            </Link>
           </div>
-          <Marquee gradient={false} speed={30}>
-            {sliderImages.map((item, index) => (
+        </div>
+      </section>
+
+      {/* Our Expertise Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Our Expertise
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              From concept to production, we offer comprehensive design services.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sliderData.map((item, index) => (
               <div
                 key={index}
-                className="flex w-max h-full items-center gap-10 mr-10 mt-4 xl:gap-20 xl:mr-20 xl:h-20 lg:h-26 md:h-16 sm:h-8 phone:h-10"
+                className="bg-white p-6 rounded-lg text-center hover:shadow-md transition-shadow"
               >
-                <span className="bg-[#DCDC28] rounded-full w-4 h-4 sm:w-3 sm:h-3 phone:w-2 phone:h-2 xl:w-5 xl:h-5 z-40" />
-                <Image className="w-max h-full" src={item.src} alt="images" />
+                <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-light">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <h3 className="text-lg font-medium text-gray-900">{item}</h3>
               </div>
             ))}
-          </Marquee>
+          </div>
         </div>
+      </section>
 
-        <ScrollImages />
+      {/* Recognition Section */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Recognitions
+            </h2>
+            <p className="text-gray-600">
+              Our work has been featured by leading design publications.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+            {sliderImages.slice(0, 12).map((item, index) => (
+              <div key={index} className="flex justify-center">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={120}
+                  height={40}
+                  style={{ objectFit: "contain" }}
+                  className="max-h-10 w-auto grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      </div>
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <Image 
+            src={clearLogo} 
+            alt="Logo" 
+            width={80} 
+            height={80} 
+            className="mx-auto mb-8 opacity-80" 
+          />
+          <h2 className="text-3xl md:text-4xl font-light mb-6">
+            Let's Create Something Amazing
+          </h2>
+          <p className="text-gray-300 mb-8 text-lg">
+            Ready to bring your product vision to life?
+          </p>
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center px-8 py-3 bg-white text-gray-900 rounded-md hover:bg-gray-100 transition-colors font-medium"
+          >
+            Start a Project
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

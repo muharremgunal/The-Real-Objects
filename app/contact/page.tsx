@@ -4,51 +4,85 @@ import { socialIcons } from "../data/homeData";
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen w-full">
-      <div className="w-full py-16 md:py-24 h-[40vh] phone:h-[30vh] flex flex-col justify-center items-center">
-        <section className="w-full flex flex-col text-left px-6 xl:px-32 phone:mt-10">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl mb-4 phone:mb-2 phone:text-4xl flex items-center">
+    <div className="min-h-screen bg-white">
+      {/* Contact Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-gray-900 mb-8">
             Let's Talk
-            <span className="inline-block transform -rotate-45 ml-2">↓</span>
           </h1>
-          <p className="bg-[#DCDC28] text-black text-xl md:text-2xl md:leading-4 phone:leading-4 lg:text-3xl lg:leading-4 w-max text-left px-4">
-            hello@therealobjects.com
+          <p className="text-xl md:text-2xl text-gray-600 mb-12">
+            Ready to bring your product vision to life? We'd love to hear from you.
           </p>
-        </section>
-      </div>
-      <div className="w-full absolute bottom-0">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end px-6 xl:px-32 mb-4 gap-6 phone:gap-2 md:gap-0">
-          <div className="flex items-center gap-4">
-            <p className="text-2xl md:text-3xl lg:text-4xl phone:text-xl font-thin">
-              Follow us
-            </p>
-            <div className="flex space-x-4 z-50">
-              {socialIcons.map((item, index) => (
-                <Link key={index} href={item.link} target="_blank">
-                  <Image
-                    className="w-5 h-5 md:w-6 md:h-6 cursor-pointer"
-                    src={item.src}
-                    alt="Social Images"
-                  />
-                </Link>
-              ))}
+          
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div className="p-8 bg-gray-50 rounded-lg">
+              <h2 className="text-2xl font-medium text-gray-900 mb-4">Email</h2>
+              <Link 
+                href="mailto:hello@therealobjects.com"
+                className="text-xl text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                hello@therealobjects.com
+              </Link>
             </div>
-          </div>
-          <div className="flex flex-col md:flex-row items-start md:items-end gap-4 phone:gap-2 md:gap-8 text-sm md:text-base">
-            <div className="flex flex-col text-left">
-              <p>Milano Business Center s.r.l.</p>
-              <p>Via Mauro Macchi, 8, 20124 Milano</p>
+            
+            <div className="p-8 bg-gray-50 rounded-lg">
+              <h2 className="text-2xl font-medium text-gray-900 mb-4">Address</h2>
+              <div className="text-gray-700">
+                <p>Milano Business Center s.r.l.</p>
+                <p>Via Mauro Macchi, 8</p>
+                <p>20124 Milano, Italy</p>
+              </div>
             </div>
-            <p>® 2024 The Real Objects</p>
           </div>
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.4110600402046!2d9.2046592!3d45.481666499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6c4381ae8b5%3A0xdeefd270e4a87e80!2sMilano%20Business%20Center!5e0!3m2!1str!2str!4v1734211486403!5m2!1str!2str"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="w-full h-[48vh]"
-        />
-      </div>
+      </section>
+
+      {/* Social Media Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-2xl font-medium text-gray-900 mb-8">Follow Our Work</h2>
+          <div className="flex justify-center space-x-8">
+            {socialIcons.map((item, index) => (
+              <Link 
+                key={index} 
+                href={item.link} 
+                target="_blank"
+                className="p-4 bg-white rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                <Image
+                  src={item.src}
+                  alt={`Social platform ${index + 1}`}
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="relative">
+        <div className="h-96">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.4110600402046!2d9.2046592!3d45.481666499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6c4381ae8b5%3A0xdeefd270e4a87e80!2sMilano%20Business%20Center!5e0!3m2!1str!2str!4v1734211486403!5m2!1str!2str"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full border-0"
+            title="Milano Business Center Location"
+          />
+        </div>
+      </section>
+
+      {/* Footer Info */}
+      <section className="py-8 px-4 text-center bg-gray-900 text-white">
+        <p className="text-sm text-gray-400">
+          © 2024 The Real Objects. All rights reserved.
+        </p>
+      </section>
     </div>
   );
 };

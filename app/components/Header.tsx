@@ -22,55 +22,72 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="backdrop-blur-sm bg-white/30 fixed  sm:h-[70px] xl:h-30 flex top-0 items-center justify-center w-screen z-50">
-      <div className="flex items-center h-20 xl:px-32 w-full sm:px-4 md:px-4 lg:px-4 xl:px-12 px-4 justify-between">
-        <div className="flex items-center">
-          <Link href="/" onClick={() => setIsMenuOpen(false)}>
+    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center">
             <Image
-              width={100}
-              height={100}
+              width={80}
+              height={32}
               src={navLogo}
-              alt="Logo"
+              alt="The Real Objects"
               priority
               style={{ height: 'auto' }}
-              className="mr-2"
+              className="h-8 w-auto"
             />
           </Link>
-        </div>
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-gray-800 hover:text-gray-600 focus:outline-none"
-          >
-            {isMenuOpen ? (
-              <Image
-                src={headerIcon}
-                alt="headerIcon"
-                width={22}
-                height={22}
-                className="mr-1"
-              />
-            ) : (
-              <LuGrip className="w-8 h-8" color="black" />
-            )}
-          </button>
-        </div>
-        <div
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } md:flex z-50 phone:h-screen gap-4 phone:px-4 phone:w-full phone:bg-white/80 bg-white md:bg-transparent md:static absolute top-20 left-0 right-0 mb-2 md:top-12 md:left-auto md:right-auto md:space-x-4 md:flex-row flex flex-col items-center`}
-        >
-          {navbarText.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              onClick={() => setIsMenuOpen(false)}
-              className={`px-2 py-1 phone:w-full text-center phone:py-6 phone:px-10 mt-4 mb-2 ${item.color} ${item.border} lg:min-w-max border border-gray-400 rounded-md sm:text-textXs lg:text-textMd xl:text-textLg bg-transparent ${item.hover}`}
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navbarText.map((item) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 hover:text-gray-900 focus:outline-none"
             >
-              {item.name}
-            </Link>
-          ))}
+              {isMenuOpen ? (
+                <Image
+                  src={headerIcon}
+                  alt="Close"
+                  width={20}
+                  height={20}
+                />
+              ) : (
+                <LuGrip className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
+              {navbarText.map((item) => (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md text-base font-medium"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
