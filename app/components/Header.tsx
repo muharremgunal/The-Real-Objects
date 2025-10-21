@@ -28,13 +28,13 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center">
             <Image
-              width={80}
-              height={32}
+              width={60}
+              height={24}
               src={navLogo}
               alt="The Real Objects"
               priority
               style={{ height: 'auto' }}
-              className="h-8 w-auto"
+              className="h-6 w-auto"
             />
           </Link>
 

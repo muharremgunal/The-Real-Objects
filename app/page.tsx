@@ -39,7 +39,7 @@ const Index = () => {
               className="mx-auto mb-8 brightness-0 invert" 
               priority
             />
-            <h1 className="text-4xl md:text-6xl font-light">
+            <h1 className="text-4xl md:text-6xl font-light" style={{ width: '200px', margin: '0 auto' }}>
               Design Studio
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
@@ -73,50 +73,48 @@ const Index = () => {
       </div>
 
       {/* Our Work Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              Our Work
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Every product we design has its own unique impact on its users. 
-              We strive to evoke emotions and create experiences that resonate on a personal level.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {hoverImages.slice(0, 6).map((image, index) => (
-              <Link
-                key={index}
-                href={`/projects/${index + 1}`}
-                className="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    style={{ objectFit: "cover" }}
-                    className="group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  {image.text}
-                </div>
-              </Link>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link 
-              href="/projects" 
-              className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
+      <section className="py-20">
+        <div className="text-center mb-16 px-4">
+          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+            Our Work
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Every product we design has its own unique impact on its users. 
+            We strive to evoke emotions and create experiences that resonate on a personal level.
+          </p>
+        </div>
+        
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+          {hoverImages.slice(0, 6).map((image, index) => (
+            <Link
+              key={index}
+              href={`/projects/${index + 1}`}
+              className="group block bg-white overflow-hidden hover:shadow-lg transition-all duration-300"
             >
-              View All Projects
+              <div className="relative h-64 md:h-80 overflow-hidden">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
+                  className="group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                {image.text}
+              </div>
             </Link>
-          </div>
+          ))}
+        </div>
+        
+        <div className="text-center mt-12 px-4">
+          <Link 
+            href="/projects" 
+            className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+          >
+            View All Projects
+          </Link>
         </div>
       </section>
 
@@ -135,20 +133,17 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
-            {sliderImages.slice(0, 12).map((item, index) => (
-              <div key={index} className="flex justify-center">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={120}
-                  height={40}
-                  style={{ objectFit: "contain" }}
-                  className="max-h-10 w-auto grayscale hover:grayscale-0 transition-all"
-                />
+          <Marquee gradient={false} speed={30}>
+            {sliderImages.map((item, index) => (
+              <div
+                key={index}
+                className="flex w-max h-full items-center gap-10 mr-10 mt-4 xl:gap-20 xl:mr-20 xl:h-20 lg:h-26 md:h-16 sm:h-8 phone:h-10"
+              >
+                <span className="bg-gray-900 rounded-full w-4 h-4 sm:w-3 sm:h-3 phone:w-2 phone:h-2 xl:w-5 xl:h-5 z-40" />
+                <Image className="w-max h-full opacity-60 grayscale hover:grayscale-0 transition-all" src={item.src} alt="images" />
               </div>
             ))}
-          </div>
+          </Marquee>
         </div>
       </section>
 
