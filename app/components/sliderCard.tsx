@@ -18,8 +18,9 @@ const SliderCard = ({
           <Image
             src={src}
             alt={alt}
-            layout="fill"
-            objectFit="cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ objectFit: "cover" }}
             className="rounded-t-lg"
           />
         </div>
@@ -36,7 +37,8 @@ const SliderCard = ({
             <Image
               src={cardIcon}
               alt={alt}
-              layout="cover"
+              width={80}
+              height={40}
               className="object-contain w-20 h-10 phone:w-10 phone:h-5 text-end xxmd:w-14 xxmd:h-8"
             />
           </div>

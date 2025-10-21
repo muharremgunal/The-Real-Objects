@@ -95,17 +95,21 @@ const ScrollImages = () => {
 
   return (
     <div className="relative h-[300vh] w-screen">
-      <div className="sticky top-0 w-full h-screen">
+      <div className="w-full h-screen" style={{ position: 'sticky', top: 0 }}>
         {scrollImages.map((image, index) => (
-          <Image
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            objectFit="cover"
-            className={`absolute w-full h-full object-cover transition-opacity duration-500 ease-in ${
-              currentStepIndex === index ? "opacity-100" : "opacity-0"
-            }`}
-          />
+          <div key={index} className="relative w-full h-full">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="100vw"
+              style={{ objectFit: "cover" }}
+              className={`transition-opacity duration-500 ease-in ${
+                currentStepIndex === index ? "opacity-100" : "opacity-0"
+              }`}
+              priority={index < 2}
+            />
+          </div>
         ))}
       </div>
       <div className="h-[300vh] overflow-hidden absolute top-36 w-full z-40">

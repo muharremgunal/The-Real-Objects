@@ -16,7 +16,7 @@ export const navbarText = [
     href: "/about",
   },
   {
-    id: 3,
+    id: 5,
     name: "Contact",
     hover: "hover:bg-[#FBD51B]",
     color: "hover:text-white",

@@ -31,6 +31,8 @@ const Header = () => {
               height={100}
               src={navLogo}
               alt="Logo"
+              priority
+              style={{ height: 'auto' }}
               className="mr-2"
             />
           </Link>
