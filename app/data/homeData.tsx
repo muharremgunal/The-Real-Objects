@@ -18,12 +18,10 @@ import Image7 from "../../public/assets/images/ourWork/7.png";
 import Image8 from "../../public/assets/images/ourWork/8.png";
 import Image9 from "../../public/assets/images/ourWork/9.png";
 
-import carousel1 from "../../public/assets/images/ourImpact/1.png";
-import carousel2 from "../../public/assets/images/ourImpact/2.png";
-import carousel3 from "../../public/assets/images/ourImpact/3.png";
-import carousel4 from "../../public/assets/images/ourImpact/4.png";
-import carousel5 from "../../public/assets/images/ourImpact/5.png";
-import carousel6 from "../../public/assets/images/ourImpact/6.png";
+import carousel1 from "../../public/assets/images/ourImpact/2.png";
+import carousel2 from "../../public/assets/images/ourImpact/4.png";
+import carousel3 from "../../public/assets/images/ourImpact/5.png";
+import carousel4 from "../../public/assets/images/ourImpact/6.png";
 
 import socialIcon1 from "../../public/assets/images/socialIcons/1.png";
 import socialIcon2 from "../../public/assets/images/socialIcons/2.png";
@@ -69,19 +67,9 @@ export const sliderData = [
 ];
 
 export const sliderCardData = [
+
   {
     src: carousel1,
-    alt: "Brick",
-    cardIcon: recognitions4,
-    designerName: "JC Torres",
-    projectDescription:
-      "Tactile lamp and timer concept fosters focus and mindfulness in work-from-home arrangements",
-    color: "bg-[#647ACD]",
-    projectLink:
-      "https://www.yankodesign.com/2024/02/12/tactile-lamp-and-timer-concept-fosters-focus-and-mindfulness-in-work-from-home-arrangements/",
-  },
-  {
-    src: carousel2,
     alt: "Woolly",
     cardIcon: recognitions7,
     designerName: "Gregory Han",
@@ -91,16 +79,7 @@ export const sliderCardData = [
     projectLink: "https://design-milk.com/woolly-capsule-coffee-machine/",
   },
   {
-    src: carousel3,
-    alt: "Image One",
-    cardIcon: recognitions5,
-    designerName: "Mickael Hemsworth",
-    projectDescription: "The Conceptual Pofu Lamp Encourages Interaction",
-    color: "bg-[#DCDC28]",
-    projectLink: "https://www.trendhunter.com/trends/pofu-lamp",
-  },
-  {
-    src: carousel4,
+    src: carousel2,
     alt: "Olive",
     cardIcon: recognitions4,
     designerName: "Sarang Sheth",
@@ -111,7 +90,7 @@ export const sliderCardData = [
       "https://www.yankodesign.com/2023/01/20/lego-themed-wireless-charger-platform-proves-why-lego-should-build-fun-filled-tech-gadgets/",
   },
   {
-    src: carousel5,
+    src: carousel3,
     alt: "Olive",
     cardIcon: recognitions3,
     designerName: "Matt Bolton",
@@ -122,7 +101,7 @@ export const sliderCardData = [
       "https://www.techradar.com/opinion/i-wish-i-could-buy-this-stunning-oled-tv-inspired-by-a-speaker-design-legend",
   },
   {
-    src: carousel6,
+    src: carousel4,
     alt: "Olive",
     cardIcon: recognitions4,
     designerName: "Gaurav Sood",
@@ -307,35 +286,36 @@ export const socialIcons = [
 export const aboutSliderData = [
   { src: theStudio1, alt: "theStudio1" },
   { src: theStudio2, alt: "theStudio2" },
-  { src: theStudio3, alt: "theStudio3" },
   { src: theStudio4, alt: "theStudio4" },
   { src: theStudio5, alt: "theStudio5" },
   { src: theStudio1, alt: "theStudio1" },
   { src: theStudio2, alt: "theStudio2" },
-  { src: theStudio3, alt: "theStudio3" },
   { src: theStudio4, alt: "theStudio4" },
   { src: theStudio5, alt: "theStudio5" },
   { src: theStudio2, alt: "theStudio2" },
   { src: theStudio6, alt: "theStudio7" },
   { src: theStudio7, alt: "theStudio8" },
-  { src: theStudio8, alt: "theStudio9" },
-  { src: theStudio3, alt: "theStudio3" },
   { src: theStudio5, alt: "theStudio5" },
-  { src: theStudio3, alt: "theStudio3" },
+  { src: theStudio1, alt: "theStudio1" },
+  { src: theStudio2, alt: "theStudio2" },
+  { src: theStudio4, alt: "theStudio4" },
+  { src: theStudio5, alt: "theStudio5" },
 ];
 export const aboutSliderDat2 = [
   { src: theStudio6, alt: "theStudio7" },
   { src: theStudio7, alt: "theStudio8" },
-  { src: theStudio8, alt: "theStudio9" },
-  { src: theStudio9, alt: "theStudio9" },
-  { src: theStudio10, alt: "theStudio10" },
+  { src: theStudio1, alt: "theStudio1" },
+  { src: theStudio2, alt: "theStudio2" },
+  { src: theStudio4, alt: "theStudio4" },
   { src: theStudio6, alt: "theStudio7" },
   { src: theStudio7, alt: "theStudio8" },
-  { src: theStudio8, alt: "theStudio9" },
-  { src: theStudio9, alt: "theStudio9" },
-  { src: theStudio10, alt: "theStudio10" },
-  { src: theStudio7, alt: "theStudio8" },
-  { src: theStudio8, alt: "theStudio9" },
-  { src: theStudio3, alt: "theStudio3" },
+  { src: theStudio5, alt: "theStudio5" },
+  { src: theStudio2, alt: "theStudio2" },
   { src: theStudio4, alt: "theStudio4" },
+  { src: theStudio5, alt: "theStudio5" },
+  { src: theStudio1, alt: "theStudio1" },
+  { src: theStudio4, alt: "theStudio4" },
+  { src: theStudio6, alt: "theStudio7" },
+  { src: theStudio7, alt: "theStudio8" },
+  { src: theStudio5, alt: "theStudio5" },
 ];
